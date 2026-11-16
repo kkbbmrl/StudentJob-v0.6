@@ -2,9 +2,20 @@
   "name": "jobetudiant-prototype",
   "private": true,
   "scripts": {
-    "test": "playwright test --workers=1 --reporter=line"
+    "test": "playwright test --workers=1 --reporter=line",
+    "check:i18n": "node scripts/check-i18n.cjs",
+    "start": "node server/start.mjs",
+    "invite:company": "node server/start.mjs invite",
+    "test:server": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config jest.config.mjs --runInBand --coverage",
+    "lint": "eslint server live.js"
   },
   "devDependencies": {
-    "@playwright/test": "^1.61.1"
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.61.1",
+    "eslint": "^10.15.0",
+    "jest": "^30.5.2"
+  },
+  "engines": {
+    "node": ">=24.0.0"
   }
 }

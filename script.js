@@ -47,139 +47,9 @@
        ======================================================================== */
     const INITIAL_MISSIONS = OfferStore.seedOffers;
 
-    const HOW_TRACKS = {
-      student: {
-        fr: [
-          { num: '01', title: 'Validez votre carte étudiant MESRS', desc: 'Importez votre carte Progrès en 60 secondes. Votre badge « Étudiant Vérifié » rassure immédiatement les recruteurs.' },
-          { num: '02', title: 'Postulez en moins de 3 clics', desc: 'Filtrez les missions selon vos heures libres entre deux TD ou le week-end, et envoyez votre candidature pré-remplie.' },
-          { num: '03', title: 'Recevez 100% du paiement sur BaridiMob', desc: 'Dès la mission terminée, les fonds séquestrés sont débloqués sur votre compte CCP / BaridiMob avec une attestation ANAE.' }
-        ],
-        en: [
-          { num: '01', title: 'Verify your MESRS Student ID', desc: 'Upload your Progrès student card in 60 seconds. Your Verified Student badge unlocks instant trust with employers.' },
-          { num: '02', title: 'Apply in under 3 clicks', desc: 'Filter missions around your university classes or weekends and send your pre-filled profile in one tap.' },
-          { num: '03', title: 'Get 100% of your pay via BaridiMob', desc: 'Once completed, the locked escrow amount is sent directly to your BaridiMob RIP with an official certificate.' }
-        ],
-        ar: [
-          { num: '01', title: 'وثّق بطاقة الطالب الجامعية MESRS', desc: 'ارفع بطاقة طالب Progrès في أقل من دقيقة للحصول على شارة طالب موثق تزيد فرص قبولك فوراً.' },
-          { num: '02', title: 'قدّم على المهمة في أقل من 3 نقرات', desc: 'اختر المهام التي تناسب أوقات فراغك بين المحاضرات أو في نهاية الأسبوع وأرسل طلبك الجاهز.' },
-          { num: '03', title: 'استلم أرباحك كاملة عبر بريدي موب', desc: 'فور انتهاء المهمة يُحرر المبلغ المحجوز مباشرة إلى حسابك BaridiMob مع شهادة خبرة موثقة.' }
-        ]
-      },
-      employer: {
-        fr: [
-          { num: '01', title: 'Publiez votre besoin en 2 minutes', desc: 'Indiquez la tâche (soutien, salon SAFEX, design, saisie), la durée et la rémunération en Dinars Algériens.' },
-          { num: '02', title: 'Choisissez parmi des étudiants vérifiés', desc: 'Consultez les profils d\'étudiants de l\'USTHB, ESI, EPAU ou Oran avec leurs notes et avis précédents.' },
-          { num: '03', title: 'Réglez en sécurité après validation', desc: 'Le paiement séquestre (BaridiMob ou CIB/Edahabia) n\'est versé qu\'une fois la mission accomplie avec succès.' }
-        ],
-        en: [
-          { num: '01', title: 'Post your mission in 2 minutes', desc: 'Describe the task (tutoring, SAFEX expo, design, data entry), duration, and fixed pay in Algerian Dinars.' },
-          { num: '02', title: 'Select from verified university talent', desc: 'Review profiles from top universities (USTHB, ESI, Oran, Constantine) with verified ratings and skills.' },
-          { num: '03', title: 'Release payment only when satisfied', desc: 'Your BaridiMob or CIB/Edahabia escrow deposit is only released once the task is completed.' }
-        ],
-        ar: [
-          { num: '01', title: 'انشر مهمتك في دقيقتين فقط', desc: 'حدد نوع المهمة (دعم دراسي، معرض SAFEX، تصميم، إدخال بيانات)، المدة والأجر بالدينار الجزائري.' },
-          { num: '02', title: 'اختر من بين طلبة جامعيين موثقين', desc: 'اطّلع على ملفات طلبة الجامعات والمدارس العليا مع تقييماتهم ومهاراتهم المؤكدة.' },
-          { num: '03', title: 'ادفع بأمان بعد إنجاز المهمة', desc: 'يبقى المبلغ مؤمناً في حساب الضمان ولا يُحوّل للطالب إلا بعد تأكيدك لإتمام العمل.' }
-        ]
-      }
-    };
-
-    const TESTIMONIALS_DATA = [
-      {
-        initials: 'YB',
-        color: 'var(--brand-100)',
-        textColor: 'var(--brand-700)',
-        name: { fr: 'Yasmine Belkacem', en: 'Yasmine Belkacem', ar: 'ياسمين بلقاسم' },
-        role: { fr: 'M1 Génie Logiciel · USTHB Alger', en: 'M1 Software Engineering · USTHB', ar: 'ماستر 1 هندسة البرمجيات · USTHB' },
-        badge: { fr: '54 000 DZD gagnés (12 missions)', en: '54,000 DZD earned (12 missions)', ar: '54,000 د.ج مكتسبة (12 مهمة)' },
-        quote: {
-          fr: '« J\'ai financé mon nouveau PC portable en donnant des cours de maths BEM à Kouba et en intégrant des pages web le week-end. Le virement BaridiMob arrive le jour même. »',
-          en: '"I funded my new laptop by tutoring BEM math in Kouba and building web pages on weekends. BaridiMob payouts arrive the same day."',
-          ar: '« موّلتُ شراء حاسوبي الجديد من خلال تقديم دروس دعم في القبة وبرمجة صفحات ويب في نهاية الأسبوع. التحويل عبر بريدي موب يصل في نفس اليوم. »'
-        }
-      },
-      {
-        initials: 'KT',
-        color: 'var(--coral-100)',
-        textColor: 'var(--coral-600)',
-        name: { fr: 'Karim Touati', en: 'Karim Touati', ar: 'كريم تواتي' },
-        role: { fr: 'Fondateur · Agence InnovDigital', en: 'Founder · InnovDigital Agency', ar: 'مؤسس وكالة InnovDigital' },
-        badge: { fr: '9 missions publiées · Note 4.9/5', en: '9 missions posted · 4.9/5 rating', ar: '9 مهام منشورة · تقييم 4.9/5' },
-        quote: {
-          fr: '« En moins de 3 heures, nous avons recruté deux étudiants de l\'ESI et de l\'EPAU pour nos visuels clients et la saisie de données. Sérieux et réactivité exemplaires. »',
-          en: '"In under 3 hours, we hired two students from ESI and EPAU for social media graphics and data entry. Outstanding reliability."',
-          ar: '« في أقل من 3 ساعات وظفنا طالبين من ESI و EPAU لتصميم منشوراتنا وإدخال البيانات. التزام واحترافية عالية جداً. »'
-        }
-      },
-      {
-        initials: 'SB',
-        color: 'var(--mint-100)',
-        textColor: 'var(--mint-600)',
-        name: { fr: 'Sarah Benali', en: 'Sarah Benali', ar: 'سارة بن علي' },
-        role: { fr: '4e Année Médecine · Faculté d\'Alger', en: '4th Year Medicine · Algiers Faculty', ar: 'السنة الرابعة طب · كلية الجزائر' },
-        badge: { fr: '89 000 DZD gagnés (19 missions)', en: '89,000 DZD earned (19 missions)', ar: '89,000 د.ج مكتسبة (19 مهمة)' },
-        quote: {
-          fr: '« Les familles sont vérifiées et le cadre est super respectueux. Je choisis uniquement des créneaux le jeudi après-midi et le samedi matin sans impacter mes stages. »',
-          en: '"Families are ID-verified and respectful. I only pick Thursday afternoon and Saturday morning slots so my hospital rotations stay untouched."',
-          ar: '« العائلات موثقة والبيئة محترمة جداً. أختار فقط حصص مساء الخميس وصباح السبت دون أي تأثير على تربصاتي الاستشفائية. »'
-        }
-      }
-    ];
-
-    const FAQ_DATA = [
-      {
-        q: {
-          fr: 'Comment fonctionne la protection du paiement BaridiMob et CIB ?',
-          en: 'How does BaridiMob and CIB escrow payment protection work?',
-          ar: 'كيف تعمل حماية الدفع عبر بريدي موب والبطاقة الذهبية / CIB؟'
-        },
-        a: {
-          fr: 'Avant que l\'étudiant ne commence la mission, le recruteur dépose le montant sur le compte séquestre JobEtudiant (via BaridiMob, Edahabia ou carte CIB). Dès que la mission est marquée comme terminée, 100% du montant est viré sur le RIP de l\'étudiant.',
-          en: 'Before the student starts working, the employer locks the mission pay in escrow (via BaridiMob, Edahabia, or CIB card). As soon as the mission is completed, 100% of the amount is transferred to the student\'s RIP.',
-          ar: 'قبل بدء الطالب في المهمة، يقوم صاحب العمل بإيداع المبلغ في حساب الضمان عبر بريدي موب أو البطاقة الذهبية أو CIB. وفور انتهاء المهمة يُحوّل المبلغ كاملاً إلى حساب الطالب.'
-        }
-      },
-      {
-        q: {
-          fr: 'Faut-il obligatoirement le statut Auto-Entrepreneur (ANAE) pour commencer ?',
-          en: 'Do I need the ANAE Auto-Entrepreneur card before applying to my first mission?',
-          ar: 'هل يشترط امتلاك بطاقة المقاول الذاتي ANAE قبل التقديم على أول مهمة؟'
-        },
-        a: {
-          fr: 'Non ! Votre carte d\'étudiant MESRS / Progrès suffit pour créer votre compte et réaliser vos premières missions ponctuelles. Pour les missions récurrentes auprès d\'entreprises qui demandent une facturation (Loi n° 22-23), nous vous accompagnons gratuitement pour activer votre statut ANAE en ligne.',
-          en: 'No! Your MESRS / Progrès student card is enough to sign up and complete occasional missions. When working regularly with companies requiring formal invoicing under Law 22-23, we guide you through free online ANAE registration.',
-          ar: 'لا! بطاقة الطالب الجامعية MESRS / Progrès كافية للتسجيل وإنجاز مهامك الأولى. وإذا رغبت في العمل المتكرر مع الشركات التي تطلب فوترة رسمية وفق القانون 22-23، نرافقك مجاناً لاستخراج بطاقة المقاول الذاتي ANAE.'
-        }
-      },
-      {
-        q: {
-          fr: 'L\'inscription et les candidatures sont-elles vraiment gratuites pour les étudiants ?',
-          en: 'Are signup and mission applications completely free for students?',
-          ar: 'هل التسجيل والتقديم على المهام مجاني تماماً للطلبة؟'
-        },
-        a: {
-          fr: 'Oui, à 100%. Les étudiants ne paient aucun abonnement ni commission sur leurs gains : si une mission affiche 12 000 DZD, vous recevez exactement 12 000 DZD. Le forfait de service (300 DZD) est facturé uniquement au recruteur.',
-          en: 'Yes, 100% free. Students pay zero subscription or commission fees: if a mission lists 12,000 DZD, you receive the full 12,000 DZD. Only the employer pays the flat 300 DZD service fee.',
-          ar: 'نعم، مجاني 100%. لا يدفع الطالب أي اشتراك أو عمولة من أرباحه: إذا كانت المهمة بقيمة 12,000 د.ج ستستلم 12,000 د.ج كاملة. يتحمل المشغل وحده رسوم الخدمة الثابتة (300 د.ج).'
-        }
-      },
-      {
-        q: {
-          fr: 'Comment sont vérifiés les profils des étudiants et des recruteurs ?',
-          en: 'How do you verify both students and employers?',
-          ar: 'كيف يتم التحقق من هوية الطلبة وأصحاب العمل؟'
-        },
-        a: {
-          fr: 'Chaque étudiant soumet sa carte d\'étudiant de l\'année universitaire en cours (vérification matricule Progrès). Chaque recruteur particulier valide sa CNI biométrique, et chaque entreprise valide son Registre du Commerce (CNRC).',
-          en: 'Every student uploads their current academic year card (checked against Progrès enrollment). Individual employers verify their biometric national ID, and businesses verify their trade registry (CNRC).',
-          ar: 'يرفع كل طالب بطاقته الجامعية للسنة الجارية (توثيق Progrès)، بينما يوثق الأفراد بطاقة التعريف البيومترية وتوثق المؤسسات سجلها التجاري.'
-        }
-      }
-    ];
-
-    /* ========================================================================
-       4. APPLICATION STATE
-       ======================================================================== */
+    const HOW_TRACKS = Object.fromEntries(["student","employer"].map(role=>[role,Object.fromEntries(["fr","en","ar"].map(lang=>[lang,I18N[lang].homepageSteps[role]]))]));
+    const TESTIMONIALS_DATA = I18N.fr.homepageTestimonials.map((item,index)=>Object.fromEntries(Object.keys(item).map(key=>[key,typeof item[key]==='string'&&["initials","color","textColor"].includes(key)?item[key]:Object.fromEntries(["fr","en","ar"].map(lang=>[lang,I18N[lang].homepageTestimonials[index][key]]))])));
+    const FAQ_DATA = I18N.fr.homepageFaq.map((item,index)=>Object.fromEntries(Object.keys(item).map(key=>[key,Object.fromEntries(["fr","en","ar"].map(lang=>[lang,I18N[lang].homepageFaq[index][key]]))])));
     const state = {
       lang: I18n.language,
       missions: OfferStore.all(),
@@ -339,16 +209,7 @@
 
       const filtered = state.uiState === 'empty' ? [] : getFilteredMissions();
 
-      /* Update aria-live count */
-      if (liveBadge) {
-        if (state.lang === 'ar') {
-          liveBadge.textContent = `${formatNumber(filtered.length)} عرض متاح`;
-        } else if (state.lang === 'en') {
-          liveBadge.textContent = `${formatNumber(filtered.length)} offers shown`;
-        } else {
-          liveBadge.textContent = `${formatNumber(filtered.length)} offre(s) affichée(s)`;
-        }
-      }
+      if(liveBadge)liveBadge.textContent=I18n.plural('offers.results',filtered.length);
 
       /* 3. Empty State */
       if (filtered.length === 0) {
@@ -426,7 +287,7 @@
             >
               <span>${q}</span>
               <span class="faq-chevron" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ui-13"></use></svg>
+                <svg class="icon icon-sm" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="16"><use href="#ui-13"></use></svg>
               </span>
             </button>
             <div class="faq-panel">
@@ -608,7 +469,7 @@
 
     const modalFocus = new Map();
     function openModal(modalId) {
-      if (modalId === 'post-modal' && window.workspaceDemo?.getRole() !== 'recruiter') return;
+      if (modalId === 'post-modal' && (window.LiveApp?.enabled?window.LiveApp.user?.role:window.workspaceDemo?.getRole()) !== 'recruiter') return;
       const modal = document.getElementById(modalId);
       if (!modal) return;
       modalFocus.set(modalId, document.activeElement);
@@ -1134,9 +995,9 @@
 
       const postForm = document.getElementById('post-mission-form');
       if (postForm) {
-        postForm.addEventListener('submit', (e) => {
+        postForm.addEventListener('submit', async (e) => {
           e.preventDefault();
-          if (window.workspaceDemo?.getRole() !== 'recruiter' || !postForm.reportValidity()) return;
+          if ((window.LiveApp?.enabled?window.LiveApp.user?.role:window.workspaceDemo?.getRole()) !== 'recruiter' || !postForm.reportValidity()) return;
           const rawTitle = document.getElementById('post-title-input').value.trim();
           const cat = document.getElementById('post-cat-select').value;
           const wilaya = document.getElementById('post-wilaya-select').value;
@@ -1182,8 +1043,8 @@
           };
 
           newMission.owner = 'demo-recruiter';
-          if (!OfferStore.add(newMission)) { showToast('Activez le stockage du navigateur pour publier votre offre.'); return; }
-          state.missions.unshift(newMission);
+          if(window.LiveApp?.enabled){try{await LiveApp.publish(newMission);state.missions=OfferStore.all();}catch(error){showToast(LiveApp.errorText(error));return;}}
+          else {if (!OfferStore.add(newMission)) { showToast('Activez le stockage du navigateur pour publier votre offre.'); return; }state.missions.unshift(newMission);}
           window.offerCatalog?.reset();
           state.activeCategory = 'all';
           state.activeWilaya = 'all';
@@ -1238,3 +1099,6 @@
     });
 
 
+
+window.addEventListener('live-ready',()=>{if(window.jobWorkspace){window.jobWorkspace.state.missions=OfferStore.all();window.jobWorkspace.state.appliedIds=new Set(OfferStore.applied());window.jobWorkspace.renderMissions();}});
+window.addEventListener('live-offers',()=>{if(window.jobWorkspace){window.jobWorkspace.state.missions=OfferStore.all();window.jobWorkspace.renderMissions();}});

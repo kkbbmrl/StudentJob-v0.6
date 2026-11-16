@@ -1,5 +1,7 @@
 /* JobEtudiant: the shared source of truth. See DESIGN_SYSTEM.md. */
 :root {
+  --offer-aside-width:calc(var(--space-20) * 4);
+  --company-meta-min:calc(var(--space-20) * 2);
   --icon-sm:16px;
   --icon-md:20px;
   --icon-lg:24px;

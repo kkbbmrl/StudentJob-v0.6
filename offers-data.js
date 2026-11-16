@@ -205,7 +205,7 @@ const legacyOffers = [
   const groupFor = type => ['job','parttime','freelance'].includes(type) ? 'work' : 'development';
   const read = (key, fallback) => { try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch { return fallback; } };
   const write = (key, value) => { try { localStorage.setItem(key,JSON.stringify(value)); return true; } catch { return false; } };
-  const local = value => value && typeof value==='object' ? (value[window.I18n?.language || 'fr'] ?? value.fr ?? '') : (value ?? '');
+  const local = value => value && typeof value==='object' ? (value.fr ?? '') : (value ?? '');
   const lines = value => (Array.isArray(value)?value:String(value||'').split('\n')).map(x=>String(x).replace(/^\s*[-•]\s*/,'').trim()).filter(Boolean);
   const today = () => new Intl.DateTimeFormat('en-CA',{timeZone:'Africa/Algiers',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
   const isClosed = offer => offer.closesOn < today();
@@ -232,22 +232,22 @@ const legacyOffers = [
     opportunity('offer-service','Accompagnement carrière — CV et entretien','service','campus-academy','Oran',{duties:['Préparer votre CV avec un conseiller.','Participer à une simulation d’entretien.','Construire un plan de recherche d’opportunités.'],conditions:['Service gratuit pour les étudiants.','Rendez-vous individuel de 45 minutes.','Disponible à Oran et en visioconférence.'],workMode:'hybrid'})
   );
   const custom=()=>{const value=read('jobetudiant_offers',[]);return Array.isArray(value)?value.filter(m=>m&&typeof m.id==='string'&&m.title&&types[m.opportunityType]):[];};
-  const all=()=>[...custom(),...seedOffers];
+  const all=()=>window.LiveApp?.enabled&&window.LiveApp.offers.length?[...window.LiveApp.offers]:[...custom(),...seedOffers];
   const isVisible=id=>{const w=read('jobetudiant_workspace',{});return !(w.hidden||[]).includes(id)&&!(w.paused||[]).includes(id);};
   const get=id=>all().find(m=>m.id===id);
   const slug=name=>'company-'+Array.from(name).map(c=>c.codePointAt(0).toString(16)).join('-');
   function companies(){const result=companySeeds.map(c=>({...c}));for(const offer of all()){const name=local(offer.employer);if(!offer.companyId)offer.companyId=slug(name);if(!result.some(c=>c.id===offer.companyId)){result.push({id:offer.companyId,name,sector:'Services & recrutement',location:offer.wilaya,size:'Non précisé',initials:name.split(' ').map(w=>w[0]).slice(0,2).join(''),color:'#4f6bff',description:offer.companyDescription||'Découvrez les opportunités de cet employeur de démonstration pour les étudiants.',benefits:['Consultez les offres disponibles et leurs conditions.']});}}return result;}
   seedOffers.forEach(m=>{if(!m.companyId)m.companyId=slug(local(m.employer));});
   function add(offer){offer.companyId=companySeeds.find(c=>c.name.toLowerCase()===local(offer.employer).toLowerCase())?.id||slug(local(offer.employer));return write('jobetudiant_offers',[offer,...custom()]);}
-  function applied(){const a=read('jobetudiant_applied',[]);return Array.isArray(a)?a:[];}
+  function applied(){if(window.LiveApp?.enabled)return window.LiveApp.applications.filter(app=>app.status!=='withdrawn').map(app=>app.offerId);const a=read('jobetudiant_applied',[]);return Array.isArray(a)?a:[];}
   function apply(id,message,applicant={}){
     const offer=get(id);
     if(!offer||!isVisible(id)||isClosed(offer))return false;
-    const ids=applied();if(!ids.includes(id))ids.push(id);
+    const previousIds=applied();const ids=[...previousIds];if(!ids.includes(id))ids.push(id);
     if(!write('jobetudiant_applied',ids))return false;
     const submissions=read('jobetudiant_submissions',{});
     submissions[id]={...applicant,message,submittedAt:new Date().toISOString()};
-    write('jobetudiant_submissions',submissions);
+    if(!write('jobetudiant_submissions',submissions)){write('jobetudiant_applied',previousIds);return false;}
     const w=read('jobetudiant_workspace',null);
     if(w?.applications&&w.profiles?.student){
       const name=w.profiles.student.name;
@@ -256,5 +256,5 @@ const legacyOffers = [
     }
     return true;
   }
-  window.OfferStore={types,groups,groupFor,read,write,local,lines,today,isClosed,date,seedOffers,all,get,add,companies,isVisible,applied,apply};
+  window.OfferStore={types,groups,groupFor,read,write,local:value=>value&&typeof value==='object'?(value[window.I18n?.language||'fr']??value.fr??''):value??'',lines,today,isClosed,date,seedOffers,all,get,add,companies,isVisible,applied,apply};
 })();

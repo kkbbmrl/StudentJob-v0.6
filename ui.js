@@ -82,3 +82,20 @@ if(closingField)closingField.addEventListener('change',()=>{
  if(closingField.value)hint.textContent=new Intl.DateTimeFormat(document.documentElement.lang==='en'?'en-GB':document.documentElement.lang+'-DZ',{day:'2-digit',month:'2-digit',year:'numeric'}).format(new Date(closingField.value+'T12:00:00Z'));
  else hint.textContent=window.marketplaceLabels?.dateHint||'';
 });
+
+function decorateInterfaceIcons(root=document){
+ const tabIcons={overview:'dashboard',applications:'applications',jobs:'briefcase',users:'users',moderation:'admin',profile:'user'};
+ const actionIcons={post:'plus',reset:'sliders',browse:'arrow-left',accept:'check',reject:'close',withdraw:'trash',verify:'badge-check',suspend:'shield',pause:'clock',moderate:'admin'};
+ root.querySelectorAll('[data-tab],[data-action],#share-offer,#copy-offer,.footer-back-top').forEach(element=>{
+  const icon=tabIcons[element.dataset.tab]||actionIcons[element.dataset.action]||(element.id==='share-offer'?'share':element.id==='copy-offer'?'file-text':element.classList.contains('footer-back-top')?'chevron-up':null);
+  if(!icon||element.querySelector('.icon'))return;
+  element.insertAdjacentHTML('afterbegin',Icon(icon,'sm'));
+ });
+}
+decorateInterfaceIcons();
+new MutationObserver(()=>decorateInterfaceIcons()).observe(document.body,{childList:true,subtree:true});
+if(location.pathname.endsWith('design-system.html')){
+ const section=document.createElement('section');section.className='component-section';
+ section.innerHTML='<h2>'+I18n.t("common.copy.iconGallery")+'</h2><div class="icon-gallery">'+Icon.names.map(name=>'<article class="icon-sample"><code data-authored>'+name+'</code><div class="component-row">'+['sm','md','lg'].map(size=>Icon(name,size)).join('')+'</div><span data-authored>16 / 20 / 24</span><small>RTL: '+I18n.text(['arrow-left','arrow-right','chevron-left','chevron-right','external-link','log-in','log-out'].includes(name)?'Oui':'Non')+'</small></article>').join('')+'</div>';
+ document.querySelector('main').append(section);I18n.apply(section);
+}

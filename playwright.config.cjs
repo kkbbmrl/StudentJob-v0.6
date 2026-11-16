@@ -1,1 +1,1 @@
-module.exports = { use: { channel: 'msedge', headless: true }, timeout: 12000 };
+module.exports = {testMatch:'**/*.spec.cjs',webServer:{command:'node server/test-start.mjs',url:'http://127.0.0.1:3107/api/session',reuseExistingServer:false,timeout:30000}, use: { channel: 'msedge', headless: true, locale: 'fr-FR' }, timeout: 12000 };

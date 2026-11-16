@@ -1,0 +1,1764 @@
+{
+  "keys": 777,
+  "errors": [],
+  "visibleLiterals": [
+    {
+      "file": "404.html",
+      "line": 4,
+      "text": "Page introuvable — JobEtudiant",
+      "translationRegistered": false
+    },
+    {
+      "file": "404.html",
+      "line": 21,
+      "text": "Aller au contenu",
+      "translationRegistered": true
+    },
+    {
+      "file": "404.html",
+      "line": 28,
+      "text": "JobEtudiant",
+      "translationRegistered": false
+    },
+    {
+      "file": "404.html",
+      "line": 30,
+      "text": "Offres",
+      "translationRegistered": true
+    },
+    {
+      "file": "404.html",
+      "line": 30,
+      "text": "Entreprises",
+      "translationRegistered": true
+    },
+    {
+      "file": "404.html",
+      "line": 30,
+      "text": "Comment ça marche",
+      "translationRegistered": true
+    },
+    {
+      "file": "404.html",
+      "line": 30,
+      "text": "Mon espace",
+      "translationRegistered": true
+    },
+    {
+      "file": "404.html",
+      "line": 30,
+      "text": "Page introuvable",
+      "translationRegistered": true
+    },
+    {
+      "file": "404.html",
+      "line": 30,
+      "text": "Retrouvez les opportunités et les entreprises sur JobEtudiant.",
+      "translationRegistered": true
+    },
+    {
+      "file": "404.html",
+      "line": 30,
+      "text": "Retour à l’accueil",
+      "translationRegistered": true
+    },
+    {
+      "file": "companies.html",
+      "line": 4,
+      "text": "Découvrir les entreprises — JobEtudiant",
+      "translationRegistered": false
+    },
+    {
+      "file": "companies.html",
+      "line": 21,
+      "text": "Aller au contenu",
+      "translationRegistered": true
+    },
+    {
+      "file": "companies.html",
+      "line": 28,
+      "text": "JobEtudiant",
+      "translationRegistered": false
+    },
+    {
+      "file": "companies.html",
+      "line": 30,
+      "text": "Offres",
+      "translationRegistered": true
+    },
+    {
+      "file": "companies.html",
+      "line": 30,
+      "text": "Entreprises",
+      "translationRegistered": true
+    },
+    {
+      "file": "companies.html",
+      "line": 30,
+      "text": "Comment ça marche",
+      "translationRegistered": true
+    },
+    {
+      "file": "companies.html",
+      "line": 30,
+      "text": "Mon espace",
+      "translationRegistered": true
+    },
+    {
+      "file": "company-pages.js",
+      "line": 5,
+      "text": "String(value??'').replace(/[&",
+      "translationRegistered": false
+    },
+    {
+      "file": "dashboard.js",
+      "line": 4,
+      "text": "String(value ?? '').replace(/[&",
+      "translationRegistered": false
+    },
+    {
+      "file": "dashboard.js",
+      "line": 52,
+      "text": "Aucun résultat. Essayez une autre recherche.",
+      "translationRegistered": true
+    },
+    {
+      "file": "dashboard.js",
+      "line": 61,
+      "text": "Informations personnelles",
+      "translationRegistered": true
+    },
+    {
+      "file": "dashboard.js",
+      "line": 61,
+      "text": "Les modifications sont enregistrées dans ce navigateur.",
+      "translationRegistered": true
+    },
+    {
+      "file": "dashboard.js",
+      "line": 61,
+      "text": "Présentation",
+      "translationRegistered": true
+    },
+    {
+      "file": "dashboard.js",
+      "line": 61,
+      "text": "Enregistrer le profil",
+      "translationRegistered": true
+    },
+    {
+      "file": "dashboard.js",
+      "line": 70,
+      "text": "Données de démonstration",
+      "translationRegistered": true
+    },
+    {
+      "file": "dashboard.js",
+      "line": 72,
+      "text": "PROTOTYPE · Comptes fictifs · Aucun paiement réel",
+      "translationRegistered": true
+    },
+    {
+      "file": "dashboard.js",
+      "line": 72,
+      "text": "Réinitialiser la démo",
+      "translationRegistered": true
+    },
+    {
+      "file": "dashboard.js",
+      "line": 79,
+      "text": "JobEtudiant",
+      "translationRegistered": false
+    },
+    {
+      "file": "dashboard.js",
+      "line": 81,
+      "text": "Explorer un espace",
+      "translationRegistered": true
+    },
+    {
+      "file": "dashboard.js",
+      "line": 81,
+      "text": "← Retour aux offres",
+      "translationRegistered": true
+    },
+    {
+      "file": "dashboard.js",
+      "line": 81,
+      "text": "Fait pour les talents",
+      "translationRegistered": true
+    },
+    {
+      "file": "dashboard.js",
+      "line": 81,
+      "text": "étudiants en Algérie.",
+      "translationRegistered": true
+    },
+    {
+      "file": "dashboard.js",
+      "line": 81,
+      "text": "VOTRE ESPACE PERSONNEL",
+      "translationRegistered": true
+    },
+    {
+      "file": "dashboard.js",
+      "line": 81,
+      "text": "Rechercher dans ce tableau",
+      "translationRegistered": true
+    },
+    {
+      "file": "dashboard.js",
+      "line": 86,
+      "text": "Amine Benali — Administration",
+      "translationRegistered": true
+    },
+    {
+      "file": "dashboard.js",
+      "line": 86,
+      "text": "Console de modération · Compte démo",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 4,
+      "text": "Composants — JobEtudiant",
+      "translationRegistered": false
+    },
+    {
+      "file": "design-system.html",
+      "line": 21,
+      "text": "Aller au contenu",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 28,
+      "text": "JobEtudiant",
+      "translationRegistered": false
+    },
+    {
+      "file": "design-system.html",
+      "line": 30,
+      "text": "Offres",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 30,
+      "text": "Entreprises",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 30,
+      "text": "Comment ça marche",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 30,
+      "text": "Mon espace",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 30,
+      "text": "JOBETUDIANT · DESIGN SYSTEM",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 30,
+      "text": "Une même famille de composants.",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 30,
+      "text": "Référence visuelle des états et composants partagés.",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 31,
+      "text": "Boutons",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 31,
+      "text": "Action principale",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 31,
+      "text": "Action secondaire",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 31,
+      "text": "Indisponible",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 31,
+      "text": "Chargement",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 32,
+      "text": "Champs et validation",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 32,
+      "text": "Nom complet",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 32,
+      "text": "Localisation",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 32,
+      "text": "Alger",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 32,
+      "text": "Oran",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 32,
+      "text": "Champ désactivé",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 32,
+      "text": "Adresse e-mail",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 32,
+      "text": "Indiquez une adresse e-mail complète.",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 32,
+      "text": "Exemple de sélection",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 32,
+      "text": "Sélection indisponible",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 33,
+      "text": "Statuts",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 33,
+      "text": "En attente",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 33,
+      "text": "Acceptée",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 33,
+      "text": "En pause",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 33,
+      "text": "Erreur",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 34,
+      "text": "Cartes et états vides",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 34,
+      "text": "CARTE STANDARD",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 34,
+      "text": "Une opportunité à découvrir",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 34,
+      "text": "Les titres, espacements et actions suivent les mêmes règles.",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 34,
+      "text": "Voir les détails",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 34,
+      "text": "Aucun résultat",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 34,
+      "text": "Modifiez votre recherche ou réinitialisez les filtres.",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 34,
+      "text": "Réinitialiser",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 35,
+      "text": "Chargement",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 36,
+      "text": "Pagination",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 37,
+      "text": "Notifications",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 37,
+      "text": "Les modifications ont été enregistrées.",
+      "translationRegistered": true
+    },
+    {
+      "file": "design-system.html",
+      "line": 37,
+      "text": "Vérifiez les champs indiqués avant de continuer.",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 8,
+      "text": "JobEtudiant — Offres courtes & jobs étudiants vérifiés en Algérie",
+      "translationRegistered": false
+    },
+    {
+      "file": "index.html",
+      "line": 36,
+      "text": "Aller au contenu principal",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 56,
+      "text": "JobEtudiant",
+      "translationRegistered": false
+    },
+    {
+      "file": "index.html",
+      "line": 61,
+      "text": "Entreprises",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 62,
+      "text": "Offres",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 63,
+      "text": "Comment ça marche",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 64,
+      "text": "Paiement & Sécurité",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 65,
+      "text": "Témoignages",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 66,
+      "text": "FAQ",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 83,
+      "text": "Connexion",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 85,
+      "text": "Publier une offre",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 97,
+      "text": "Entreprises",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 98,
+      "text": "Offres",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 99,
+      "text": "Comment ça marche",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 100,
+      "text": "Paiement & Sécurité",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 101,
+      "text": "Témoignages",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 102,
+      "text": "FAQ",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 105,
+      "text": "Connexion",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 106,
+      "text": "Publier une offre",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 130,
+      "text": "12 nouvelles offres publiées aujourd'hui",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 134,
+      "text": "Gagnez en expérience et en DZD grâce aux offres de",
+      "translationRegistered": false
+    },
+    {
+      "file": "index.html",
+      "line": 136,
+      "text": "soutien scolaire",
+      "translationRegistered": false
+    },
+    {
+      "file": "index.html",
+      "line": 148,
+      "text": "Rechercher une offre",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 158,
+      "text": "Wilaya",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 160,
+      "text": "Toutes les wilayas",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 161,
+      "text": "Alger",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 162,
+      "text": "Oran",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 163,
+      "text": "Constantine",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 164,
+      "text": "Sétif",
+      "translationRegistered": false
+    },
+    {
+      "file": "index.html",
+      "line": 165,
+      "text": "Bordj Bou Arreridj",
+      "translationRegistered": false
+    },
+    {
+      "file": "index.html",
+      "line": 166,
+      "text": "100% Télétravail",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 170,
+      "text": "Trouver une offre",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 178,
+      "text": "Publier une offre",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 182,
+      "text": "Populaire :",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 183,
+      "text": "Soutien BEM/BAC",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 184,
+      "text": "Hôtesses SAFEX",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 185,
+      "text": "Télétravail",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 193,
+      "text": "Votre premier stage",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 193,
+      "text": "Web & mobile · Hybride",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 194,
+      "text": "VOTRE AVENIR COMMENCE ICI",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 195,
+      "text": "Un étudiant prépare son avenir sur son ordinateur, entouré d’opportunités",
+      "translationRegistered": false
+    },
+    {
+      "file": "index.html",
+      "line": 203,
+      "text": "Étudiants, entreprises, possibilités.",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 204,
+      "text": "Apprenez. Progressez.",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 204,
+      "text": "Formations & nouvelles compétences",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 205,
+      "text": "Un talent, une opportunité.",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 205,
+      "text": "À votre rythme, près de vous.",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 216,
+      "text": "Étudiants vérifiés (MESRS)",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 220,
+      "text": "Offres réalisées en Algérie",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 224,
+      "text": "Paiements versés en moins de 2h",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 227,
+      "text": "&lt;",
+      "translationRegistered": false
+    },
+    {
+      "file": "index.html",
+      "line": 228,
+      "text": "Délai moyen de recrutement",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 250,
+      "text": "Catalogue en temps réel",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 251,
+      "text": "Offres disponibles près de votre campus",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 262,
+      "text": "Emplois & travail",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 262,
+      "text": "Emploi, temps partiel et travail indépendant",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 263,
+      "text": "Services, stages & apprentissage",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 263,
+      "text": "Stages, services étudiants, formations et conférences",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 268,
+      "text": "Rechercher une offre",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 279,
+      "text": "Localisation",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 281,
+      "text": "Toutes les wilayas",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 282,
+      "text": "Alger",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 283,
+      "text": "Oran",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 284,
+      "text": "Constantine",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 285,
+      "text": "Sétif",
+      "translationRegistered": false
+    },
+    {
+      "file": "index.html",
+      "line": 286,
+      "text": "Bordj Bou Arreridj",
+      "translationRegistered": false
+    },
+    {
+      "file": "index.html",
+      "line": 287,
+      "text": "100% Télétravail",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 292,
+      "text": "Trier par",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 294,
+      "text": "Tri : Recommandées",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 295,
+      "text": "Rémunération ( décroissante )",
+      "translationRegistered": false
+    },
+    {
+      "file": "index.html",
+      "line": 296,
+      "text": "Urgentes d'abord",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 305,
+      "text": "Type d’opportunité",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 305,
+      "text": "Tous les types",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 305,
+      "text": "Clôture à partir du",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 305,
+      "text": "jj/mm/aaaa",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 310,
+      "text": "Toutes",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 311,
+      "text": "Soutien & Cours",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 312,
+      "text": "Événementiel",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 313,
+      "text": "Design",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 314,
+      "text": "Traduction",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 315,
+      "text": "Tech & Saisie",
+      "translationRegistered": false
+    },
+    {
+      "file": "index.html",
+      "line": 316,
+      "text": "Vente & Retail",
+      "translationRegistered": false
+    },
+    {
+      "file": "index.html",
+      "line": 317,
+      "text": "Livraison & Flyers",
+      "translationRegistered": false
+    },
+    {
+      "file": "index.html",
+      "line": 323,
+      "text": "Tester les états d'interface (UX) :",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 325,
+      "text": "Normal (9 offres)",
+      "translationRegistered": false
+    },
+    {
+      "file": "index.html",
+      "line": 326,
+      "text": "Chargement (Skeletons)",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 327,
+      "text": "Vide (0 résultat)",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 328,
+      "text": "Erreur réseau",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 347,
+      "text": "Parcours simplifié",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 348,
+      "text": "Comment fonctionne JobEtudiant ?",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 373,
+      "text": "Confiance & Conformité Algérie",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 387,
+      "text": "Vérification Carte Étudiant MESRS / Progrès",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 388,
+      "text": "Chaque étudiant valide son certificat de scolarité universitaire (USTHB, ESI, Oran, Constantine, Sétif...) et sa pièce d'identité.",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 397,
+      "text": "Paiement Séquestre BaridiMob &amp; SATIM (CIB / Edahabia)",
+      "translationRegistered": false
+    },
+    {
+      "file": "index.html",
+      "line": 398,
+      "text": "Le montant est bloqué avant le début de la offre et transféré sur le RIP BaridiMob de l'étudiant dès validation.",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 407,
+      "text": "Cadre Légal Auto-Entrepreneur (Loi n° 22-23 &amp; ANAE)",
+      "translationRegistered": false
+    },
+    {
+      "file": "index.html",
+      "line": 408,
+      "text": "Attestation d'expérience et reçu générés automatiquement, conformes au statut national de l'étudiant auto-entrepreneur et à la loi 18-07.",
+      "translationRegistered": false
+    },
+    {
+      "file": "index.html",
+      "line": 417,
+      "text": "Simulateur de Revenu Étudiant",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 418,
+      "text": "0% Commission Étudiant",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 423,
+      "text": "Montant de la offre :",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 424,
+      "text": "12 000 DZD",
+      "translationRegistered": false
+    },
+    {
+      "file": "index.html",
+      "line": 439,
+      "text": "Rémunération brute affichée",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 440,
+      "text": "12 000 DZD",
+      "translationRegistered": false
+    },
+    {
+      "file": "index.html",
+      "line": 443,
+      "text": "Frais prélevés à l'étudiant",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 444,
+      "text": "0 DZD (0%)",
+      "translationRegistered": false
+    },
+    {
+      "file": "index.html",
+      "line": 447,
+      "text": "Frais service recruteur (forfait fixe)",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 448,
+      "text": "300 DZD",
+      "translationRegistered": false
+    },
+    {
+      "file": "index.html",
+      "line": 451,
+      "text": "Net viré sur votre BaridiMob",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 452,
+      "text": "12 000 DZD",
+      "translationRegistered": false
+    },
+    {
+      "file": "index.html",
+      "line": 473,
+      "text": "Communauté vérifiée",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 474,
+      "text": "Ils utilisent JobEtudiant chaque semaine",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 487,
+      "text": "Questions fréquentes",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 488,
+      "text": "Tout savoir avant de commencer",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 501,
+      "text": "Prêt à décrocher votre prochaine offre étudiante ?",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 507,
+      "text": "Trouver une offre",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 530,
+      "text": "Candidature Express en 1 clic",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 531,
+      "text": "Postuler à la offre",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 541,
+      "text": "Étudiant vérifié (Profil MESRS)",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 546,
+      "text": "RIP BaridiMob pour le versement séquestre",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 551,
+      "text": "Message court au recruteur",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 556,
+      "text": "Annuler",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 557,
+      "text": "Envoyer ma candidature",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 569,
+      "text": "Candidature envoyée avec succès !",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 571,
+      "text": "Continuer l'exploration",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 583,
+      "text": "Espace Recruteur",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 584,
+      "text": "Publier une offre",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 590,
+      "text": "Famille d’offres",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 590,
+      "text": "Emplois & travail",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 590,
+      "text": "Services, stages & apprentissage",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 590,
+      "text": "Type d’opportunité",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 590,
+      "text": "Date de clôture",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 591,
+      "text": "Utiliser un exemple de stage informatique",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 591,
+      "text": "L’exemple remplit les sections ci-dessous. Personnalisez-les avant de publier.",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 593,
+      "text": "Mode de travail",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 595,
+      "text": "Sur place",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 596,
+      "text": "Télétravail · 100 % à distance",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 597,
+      "text": "Hybride · Sur place et à distance",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 601,
+      "text": "Titre de la offre",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 607,
+      "text": "Catégorie",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 609,
+      "text": "Soutien & Cours",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 610,
+      "text": "Événementiel",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 611,
+      "text": "Design",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 612,
+      "text": "Traduction",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 613,
+      "text": "Tech & Saisie",
+      "translationRegistered": false
+    },
+    {
+      "file": "index.html",
+      "line": 614,
+      "text": "Vente & Retail",
+      "translationRegistered": false
+    },
+    {
+      "file": "index.html",
+      "line": 615,
+      "text": "Livraison & Flyers",
+      "translationRegistered": false
+    },
+    {
+      "file": "index.html",
+      "line": 620,
+      "text": "Wilaya",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 622,
+      "text": "Alger",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 623,
+      "text": "Oran",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 624,
+      "text": "Constantine",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 625,
+      "text": "Sétif",
+      "translationRegistered": false
+    },
+    {
+      "file": "index.html",
+      "line": 626,
+      "text": "Bordj Bou Arreridj",
+      "translationRegistered": false
+    },
+    {
+      "file": "index.html",
+      "line": 633,
+      "text": "Rémunération (DZD)",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 638,
+      "text": "Durée estimée",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 644,
+      "text": "Votre entreprise ou nom",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 649,
+      "text": "Description et tâches à réaliser",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 653,
+      "text": "Profil recherché · un point par ligne",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 656,
+      "text": "Détails de l’offre",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 656,
+      "text": "Écrivez un élément par ligne : chaque ligne deviendra une puce sur la page de l’offre.",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 657,
+      "text": "Tâches & responsabilités",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 658,
+      "text": "Compétences linguistiques",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 659,
+      "text": "Qualités requises",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 660,
+      "text": "Conditions de travail / participation",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 662,
+      "text": "Disponibilité et horaires",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 666,
+      "text": "Annuler",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 667,
+      "text": "Publier maintenant",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 680,
+      "text": "Session Démo Interactive",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 681,
+      "text": "Connexion",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 694,
+      "text": "Yasmine Belkacem (Étudiante USTHB)",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 695,
+      "text": "Master 1 Génie Logiciel · Carte MESRS validée",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 702,
+      "text": "Karim Touati — PME InnovDigital",
+      "translationRegistered": true
+    },
+    {
+      "file": "index.html",
+      "line": 703,
+      "text": "Recruteur Vérifié · Alger (Dely Ibrahim)",
+      "translationRegistered": true
+    },
+    {
+      "file": "live.js",
+      "line": 3,
+      "text": "String(value??'').replace(/[&",
+      "translationRegistered": false
+    },
+    {
+      "file": "live.js",
+      "line": 44,
+      "text": "JobEtudiant",
+      "translationRegistered": false
+    },
+    {
+      "file": "offer-card.js",
+      "line": 3,
+      "text": "String(value??'').replace(/[&",
+      "translationRegistered": false
+    },
+    {
+      "file": "offer-pages.js",
+      "line": 4,
+      "text": "String(value??'').replace(/[&",
+      "translationRegistered": false
+    },
+    {
+      "file": "offer-pages.js",
+      "line": 66,
+      "text": "'+I18n.t('common.copy.applicationSent')+'",
+      "translationRegistered": false
+    },
+    {
+      "file": "offer.html",
+      "line": 4,
+      "text": "Détails de l’offre — JobEtudiant",
+      "translationRegistered": false
+    },
+    {
+      "file": "offer.html",
+      "line": 21,
+      "text": "Aller au contenu",
+      "translationRegistered": true
+    },
+    {
+      "file": "offer.html",
+      "line": 28,
+      "text": "JobEtudiant",
+      "translationRegistered": false
+    },
+    {
+      "file": "offer.html",
+      "line": 30,
+      "text": "Offres",
+      "translationRegistered": true
+    },
+    {
+      "file": "offer.html",
+      "line": 30,
+      "text": "Entreprises",
+      "translationRegistered": true
+    },
+    {
+      "file": "offer.html",
+      "line": 30,
+      "text": "Comment ça marche",
+      "translationRegistered": true
+    },
+    {
+      "file": "offer.html",
+      "line": 30,
+      "text": "Mon espace",
+      "translationRegistered": true
+    },
+    {
+      "file": "offers-data.js",
+      "line": 211,
+      "text": "offer.closesOn",
+      "translationRegistered": false
+    },
+    {
+      "file": "ui.js",
+      "line": 2,
+      "text": "JobEtudiant",
+      "translationRegistered": false
+    },
+    {
+      "file": "ui.js",
+      "line": 2,
+      "text": "Du premier stage au prochain déclic.",
+      "translationRegistered": true
+    },
+    {
+      "file": "ui.js",
+      "line": 2,
+      "text": "Des opportunités pour les étudiants,",
+      "translationRegistered": true
+    },
+    {
+      "file": "ui.js",
+      "line": 2,
+      "text": "partout en Algérie.",
+      "translationRegistered": true
+    },
+    {
+      "file": "ui.js",
+      "line": 2,
+      "text": "Pensé pour les talents d’Algérie",
+      "translationRegistered": true
+    },
+    {
+      "file": "ui.js",
+      "line": 2,
+      "text": "Étudiants",
+      "translationRegistered": true
+    },
+    {
+      "file": "ui.js",
+      "line": 2,
+      "text": "Trouver une offre",
+      "translationRegistered": true
+    },
+    {
+      "file": "ui.js",
+      "line": 2,
+      "text": "Découvrir les entreprises",
+      "translationRegistered": true
+    },
+    {
+      "file": "ui.js",
+      "line": 2,
+      "text": "Mon espace étudiant",
+      "translationRegistered": true
+    },
+    {
+      "file": "ui.js",
+      "line": 2,
+      "text": "Comment ça marche",
+      "translationRegistered": true
+    },
+    {
+      "file": "ui.js",
+      "line": 2,
+      "text": "Recruteurs",
+      "translationRegistered": true
+    },
+    {
+      "file": "ui.js",
+      "line": 2,
+      "text": "Espace recruteur",
+      "translationRegistered": true
+    },
+    {
+      "file": "ui.js",
+      "line": 2,
+      "text": "Publier une offre",
+      "translationRegistered": true
+    },
+    {
+      "file": "ui.js",
+      "line": 2,
+      "text": "Confiance & accompagnement",
+      "translationRegistered": true
+    },
+    {
+      "file": "ui.js",
+      "line": 2,
+      "text": "Questions fréquentes",
+      "translationRegistered": true
+    },
+    {
+      "file": "ui.js",
+      "line": 2,
+      "text": "Pôles universitaires",
+      "translationRegistered": true
+    },
+    {
+      "file": "ui.js",
+      "line": 2,
+      "text": "Alger · USTHB, ESI",
+      "translationRegistered": false
+    },
+    {
+      "file": "ui.js",
+      "line": 2,
+      "text": "Oran · USTO",
+      "translationRegistered": false
+    },
+    {
+      "file": "ui.js",
+      "line": 2,
+      "text": "Constantine & Sétif",
+      "translationRegistered": false
+    },
+    {
+      "file": "ui.js",
+      "line": 2,
+      "text": "Toutes les opportunités ↗",
+      "translationRegistered": true
+    },
+    {
+      "file": "ui.js",
+      "line": 2,
+      "text": "Sur place, en hybride",
+      "translationRegistered": true
+    },
+    {
+      "file": "ui.js",
+      "line": 2,
+      "text": "ou depuis chez vous.",
+      "translationRegistered": true
+    },
+    {
+      "file": "ui.js",
+      "line": 2,
+      "text": "© 2026 JobEtudiant. Tous droits réservés.",
+      "translationRegistered": true
+    },
+    {
+      "file": "ui.js",
+      "line": 2,
+      "text": "Prototype de démonstration",
+      "translationRegistered": true
+    },
+    {
+      "file": "ui.js",
+      "line": 2,
+      "text": "Retour en haut",
+      "translationRegistered": true
+    },
+    {
+      "file": "ui.js",
+      "line": 99,
+      "text": "'+I18n.t(\"common.copy.iconGallery\")+'",
+      "translationRegistered": false
+    },
+    {
+      "file": "ui.js",
+      "line": 99,
+      "text": "'+name+'",
+      "translationRegistered": false
+    },
+    {
+      "file": "ui.js",
+      "line": 99,
+      "text": "Icon(name,size)).join('')+'",
+      "translationRegistered": false
+    },
+    {
+      "file": "ui.js",
+      "line": 99,
+      "text": "RTL: '+I18n.text(['arrow-left','arrow-right','chevron-left','chevron-right','external-link','log-in','log-out'].includes(name)?'Oui':'Non')+'",
+      "translationRegistered": false
+    },
+    {
+      "file": "ui.js",
+      "line": 99,
+      "text": "').join('')+'",
+      "translationRegistered": false
+    }
+  ]
+}

@@ -5,7 +5,7 @@
   let language=supported.includes(document.documentElement.lang)?document.documentElement.lang:'fr';
   const sources=new Map();
   const flatten=(object,prefix='')=>Object.entries(object).flatMap(([key,value])=>typeof value==='object'&&!Array.isArray(value)?flatten(value,prefix+key+'.'):[[prefix+key,value]]);
-  flatten(dictionaries.fr).forEach(([key,value])=>{if(typeof value==='string'&&!value.includes('{'))sources.set(value.replace(/\s+/g,' ').trim(),key);});
+  supported.forEach(lang=>flatten(dictionaries[lang]).forEach(([key,value])=>{if(typeof value==='string'&&!value.includes('{'))sources.set(value.replace(/\s+/g,' ').trim(),key);}));
   const lookup=(lang,key)=>key.split('.').reduce((value,part)=>value?.[part],dictionaries[lang])??dictionaries[lang][key];
   function t(key,parameters={}){
     const value=lookup(language,key)??lookup('fr',key)??key;
@@ -24,6 +24,8 @@
     match=normalized.match(/^Découvrez (.+)$/);if(match)return t('companies.about',{name:match[1]});
     match=normalized.match(/^Toutes les offres de (.+) →$/);if(match)return t('offers.company',{name:match[1]});
     match=normalized.match(/^Voir les offres \((\d+)\)$/);if(match)return text('Voir les offres')+' ('+number(+match[1])+')';
+    match=normalized.match(/^Durée : (.+)$/);if(match)return text('Durée')+': '+text(match[1].replace(/\.$/,''));
+    match=normalized.match(/^RTL: (Oui|Non)$/);if(match)return 'RTL: '+text(match[1]);
     return source;
   }
   const textBindings=new WeakMap(),attributeBindings=new WeakMap();
@@ -63,7 +65,7 @@
       });
     } finally {applying=false;}
   }
-  function switcher(){return '<div class="lang-switcher shared-language-switcher" data-language-switcher role="group" aria-label="'+t('languageLabel')+'">'+supported.map(lang=>'<button type="button" class="lang-btn" data-language="'+lang+'" lang="'+lang+'" aria-pressed="'+(lang===language)+'">'+({fr:'FR',en:'EN',ar:'عربي'}[lang])+'</button>').join('')+'</div>';}
+  function switcher(){return '<div class="lang-switcher shared-language-switcher" data-language-switcher role="group" aria-label="'+t('languageLabel')+'">'+supported.map(lang=>'<button type="button" class="lang-btn" data-language="'+lang+'" data-lang="'+lang+'" lang="'+lang+'" aria-pressed="'+(lang===language)+'">'+({fr:'FR',en:'EN',ar:'عربي'}[lang])+'</button>').join('')+'</div>';}
   function mountSwitchers(){
     document.querySelectorAll('.header-actions,.unified-header-inner,.ws-topbar').forEach(host=>{
       if(host.querySelector('[data-language-switcher]'))return;
@@ -77,6 +79,8 @@
     let description=document.querySelector('meta[name=description]');
     if(!description){description=document.createElement('meta');description.name='description';document.head.append(description);}
     description.content=t('heroSubtitle');
+    document.querySelector('meta[property="og:title"]')?.setAttribute('content',document.title);
+    document.querySelector('meta[property="og:description"]')?.setAttribute('content',description.content);
   }
   function setLanguage(next){
     if(!supported.includes(next))return;
@@ -84,12 +88,13 @@
     try{localStorage.setItem('jobetudiant_lang',JSON.stringify(next));}catch{}
     mountSwitchers();apply();metadata();
     window.dispatchEvent(new CustomEvent('languagechange',{detail:{language:next}}));
+    metadata();
   }
   function validation(field){
     const validity=field.validity;
     return validity.valueMissing?t('validation.required'):validity.typeMismatch?t('validation.email'):validity.tooShort?t('validation.short',{min:field.minLength}):t('validation.invalid');
   }
-  window.I18n={get language(){return language;},get locale(){return locale();},t,text,apply,setLanguage,switcher,mountSwitchers,number,date,currency,plural,relative:(value,unit='day')=>new Intl.RelativeTimeFormat(locale(),{numeric:'auto'}).format(value,unit),validation,dictionaries};
+  window.I18n={get language(){return language;},get locale(){return locale();},t,text,apply,setLanguage,switcher,mountSwitchers,number,date,currency,plural,relative:(value,unit='day')=>new Intl.RelativeTimeFormat(locale(),{numeric:'auto'}).format(value,unit),validation,dictionaries,keyFor:source=>sources.get(String(source).replace(/\s+/g,' ').trim())};
   window.t=t;
   document.addEventListener('click',event=>{const button=event.target.closest('[data-language]');if(button)setLanguage(button.dataset.language);});
   document.addEventListener('DOMContentLoaded',()=>{

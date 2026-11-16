@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
 <script>(function(){var language;try{language=JSON.parse(localStorage.getItem('jobetudiant_lang'));}catch(e){}if(!['fr','en','ar'].includes(language)){language=(navigator.language||'fr').split('-')[0];if(!['fr','en','ar'].includes(language))language='fr';}document.documentElement.lang=language;document.documentElement.dir=language==='ar'?'rtl':'ltr';document.documentElement.classList.add('i18n-pending');})();</script>
-<script src="i18n/fr.js"></script><script src="i18n/en.js"></script><script src="i18n/ar.js"></script><script src="i18n.js"></script>
+<script src="i18n/fr.js" defer></script><script src="i18n/en.js" defer></script><script src="i18n/ar.js" defer></script><script src="i18n.js" defer></script><script src="assets/icons/icons.js" defer></script><script src="offer-card.js" defer></script><script src="live.js" defer></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>JobEtudiant — Offres courtes & jobs étudiants vérifiés en Algérie</title>
   <meta name="description" content="La plateforme HRTech algérienne qui connecte les étudiants universitaires vérifiés aux PME et particuliers pour des offres flexibles rémunérées en DZD." />
@@ -28,12 +28,12 @@
 <meta property="og:type" content="website">
 <meta property="og:image" content="assets/social/social-preview.png">
 <meta name="twitter:card" content="summary_large_image">
-<script src="assets/icons/icons.js"></script><script src="offer-card.js"></script>
+
 <script src="ui.js" defer></script>
 </head>
 <body>
   <!-- Skip to Main Content -->
-  <a href="#main-content" class="skip-link" id="skip-link-el">Aller au contenu principal</a>
+  <a href="#main-content" class="skip-link" id="skip-link-el" data-i18n="skipLink">Aller au contenu principal</a>
 
   <!-- Top Scroll Progress Bar -->
   <div class="scroll-progress-track" aria-hidden="true">
@@ -46,7 +46,7 @@
   <!-- Sticky Header -->
   <header class="site-header marketplace-header" id="site-header">
     <div class="container header-inner">
-      <a href="#top" class="brand-logo" aria-label="JobEtudiant DZ — Accueil">
+      <a href="#top" class="brand-logo" aria-label="JobEtudiant DZ — Accueil" data-i18n-aria-label="homeLabel">
         <span class="brand-logo-mark" aria-hidden="true">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
@@ -57,7 +57,7 @@
         <span class="brand-logo-tag">DZ</span>
       </a>
 
-      <nav class="primary-nav" aria-label="Navigation principale">
+      <nav class="primary-nav" aria-label="Navigation principale" data-i18n-aria-label="navigationLabel">
         <a href="companies.html" class="nav-link" data-i18n="navCompanies">Entreprises</a>
         <a href="#missions" class="nav-link" data-i18n="navMissions">Offres</a>
         <a href="#how-it-works" class="nav-link" data-i18n="navHow">Comment ça marche</a>
@@ -68,13 +68,13 @@
 
       <div class="header-actions">
         <!-- Saved Missions Counter -->
-        <button type="button" class="saved-counter-btn" id="saved-filter-toggle" aria-pressed="false" title="Offres sauvegardées">
-          <svg class="u-color-coral-500" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><use href="#ui-1"></use></svg>
+        <button type="button" class="saved-counter-btn" id="saved-filter-toggle" aria-pressed="false" title="Offres sauvegardées" data-i18n-title="savedOffers">
+          <svg class="icon icon-sm u-color-coral-500" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="16"><use href="#ui-1"></use></svg>
           <span class="saved-count-pill" id="saved-count-badge">2</span>
         </button>
 
         <!-- Language Switcher (FR / EN / AR) -->
-        <div class="lang-switcher" role="group" aria-label="Sélecteur de langue">
+        <div class="lang-switcher" role="group" aria-label="Sélecteur de langue" data-i18n-aria-label="languageLabel">
           <button type="button" class="lang-btn" data-lang="fr" aria-pressed="true">FR</button>
           <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
           <button type="button" class="lang-btn" data-lang="ar" aria-pressed="false">عربي</button>
@@ -85,8 +85,8 @@
           <span data-i18n="ctaSecondary">Publier une offre</span>
         </button>
 
-        <button type="button" class="mobile-menu-toggle" id="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Menu">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><use href="#ui-2"></use></svg>
+        <button type="button" class="mobile-menu-toggle" id="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Menu" data-i18n-aria-label="menuLabel">
+          <svg class="icon icon-md" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="20" stroke-linecap="round"><use href="#ui-2"></use></svg>
         </button>
       </div>
     </div>
@@ -144,23 +144,23 @@
           <!-- Fast Search Bar (< 3 clicks to relevant mission) -->
           <form class="hero-search-bar" id="hero-search-form" role="search">
             <div class="hero-search-input-group">
-              <svg class="u-color-brand-500 u-flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ui-3"></use></svg>
+              <svg class="icon icon-sm u-color-brand-500 u-flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="16"><use href="#ui-3"></use></svg>
               <label for="hero-keyword-input" class="form-label" data-i18n="searchLabel">Rechercher une offre</label>
               <input
                 type="search"
                 id="hero-keyword-input"
                 class="hero-search-input"
-                placeholder="Ex: Maths BEM, Canva, SAFEX, Excel..."
+                placeholder="Ex: Maths BEM, Canva, SAFEX, Excel..." data-i18n-placeholder="heroSearchPlaceholder"
                 data-i18n-placeholder="heroSearchPlaceholder"
               />
             </div>
 
-            <label for="hero-wilaya-select" class="sr-only">Wilaya</label>
+            <label for="hero-wilaya-select" class="sr-only" data-i18n="labelWilaya">Wilaya</label>
             <select id="hero-wilaya-select" class="hero-city-select">
               <option value="all" data-i18n="allLocations">Toutes les wilayas</option>
-              <option value="Alger">Alger</option>
-              <option value="Oran">Oran</option>
-              <option value="Constantine">Constantine</option>
+              <option value="Alger" data-i18n="demo.offers.offer-internship.commune">Alger</option>
+              <option value="Oran" data-i18n="demo.offers.offer-service.commune">Oran</option>
+              <option value="Constantine" data-i18n="demo.offers.offer-conference.commune">Constantine</option>
               <option value="Sétif">Sétif</option>
               <option value="Bordj Bou Arreridj">Bordj Bou Arreridj</option>
               <option value="remote" data-i18n="remoteOnly">100% Télétravail</option>
@@ -168,21 +168,21 @@
 
             <button type="submit" class="btn btn-primary btn-lg" id="hero-find-btn">
               <span data-i18n="ctaPrimary">Trouver une offre</span>
-              <svg class="btn-arrow rtl-flip" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#ui-4"></use></svg>
+              <svg class="icon icon-sm btn-arrow rtl-flip" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"><use href="#ui-4"></use></svg>
             </button>
           </form>
 
           <div class="hero-cta-row">
             <button type="button" class="btn btn-secondary" id="hero-post-btn">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ui-5"></use></svg>
+              <svg class="icon icon-sm" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="16"><use href="#ui-5"></use></svg>
               <span data-i18n="ctaSecondary">Publier une offre</span>
             </button>
 
             <div class="quick-tags-row">
               <span data-i18n="popularLabel">Populaire :</span>
-              <button type="button" class="quick-tag-chip" data-quick-filter="tutoring">Soutien BEM/BAC</button>
-              <button type="button" class="quick-tag-chip" data-quick-filter="events">Hôtesses SAFEX</button>
-              <button type="button" class="quick-tag-chip" data-quick-filter="remote">Télétravail</button>
+              <button type="button" class="quick-tag-chip" data-quick-filter="tutoring" data-i18n="interface.copy.bemBacTutoring">Soutien BEM/BAC</button>
+              <button type="button" class="quick-tag-chip" data-quick-filter="events" data-i18n="interface.copy.safexEventHosts">Hôtesses SAFEX</button>
+              <button type="button" class="quick-tag-chip" data-quick-filter="remote" data-i18n="common.copy.remote">Télétravail</button>
             </div>
           </div>
         </div>
@@ -190,8 +190,8 @@
         <!-- Right Column: Custom Inline SVG Illustration + Floating Mission Cards -->
         <div class="hero-stage restored-stage" id="hero-stage">
 <div class="illustration-halo" aria-hidden="true"></div>
-<a href="offer.html?id=offer-internship" class="float-card float-card-1"><span class="float-icon u-background-brand-100 u-color-brand-500">⌘</span><span><strong>Votre premier stage</strong><small>Web & mobile · Hybride</small></span><span class="float-arrow">↗</span></a>
-<div class="hero-illustration-card"><div class="illustration-top"><span class="illustration-dots"><i></i><i></i><i></i></span><span>VOTRE AVENIR COMMENCE ICI</span><span class="illustration-spark">✳</span></div>
+<a href="offer.html?id=offer-internship" class="float-card float-card-1"><span class="float-icon u-background-brand-100 u-color-brand-500">⌘</span><span><strong data-i18n="interface.copy.yourFirstInternship">Votre premier stage</strong><small data-i18n="interface.copy.webMobileHybrid">Web & mobile · Hybride</small></span><span class="float-arrow">↗</span></a>
+<div class="hero-illustration-card"><div class="illustration-top"><span class="illustration-dots"><i></i><i></i><i></i></span><span data-i18n="interface.copy.yourFutureStartsHere">VOTRE AVENIR COMMENCE ICI</span><span class="illustration-spark">✳</span></div>
 <svg class="student-illustration" viewBox="0 0 360 280" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="student-art-title"><title id="student-art-title">Un étudiant prépare son avenir sur son ordinateur, entouré d’opportunités</title><defs><linearGradient id="svgBrandGrad" x1="40" y1="40" x2="290" y2="240" gradientUnits="userSpaceOnUse"><stop stop-color="#4F6BFF"/><stop offset="1" stop-color="#7B5CFF"/></linearGradient><linearGradient id="svgFreshGrad"><stop stop-color="#14C8A0"/><stop offset="1" stop-color="#38BDF8"/></linearGradient><linearGradient id="svgWarmGrad"><stop stop-color="#FF6B5A"/><stop offset="1" stop-color="#FFC83D"/></linearGradient></defs>
 <circle cx="181" cy="140" r="113" fill="#F3F5FF"/><circle cx="181" cy="140" r="92" stroke="#E4E9FF" stroke-dasharray="3 7"/>
 <g class="art-window"><rect x="34" y="42" width="174" height="119" rx="14" fill="white" stroke="#E4E9FF" stroke-width="2"/><path d="M34 68H208" stroke="#E4E9FF"/><circle cx="48" cy="55" r="3" fill="#FF6B5A"/><circle cx="59" cy="55" r="3" fill="#FFC83D"/><circle cx="70" cy="55" r="3" fill="#14C8A0"/><rect x="50" y="85" width="76" height="10" rx="5" fill="url(#svgBrandGrad)"/><rect x="50" y="107" width="118" height="6" rx="3" fill="#E4E9FF"/><rect x="50" y="121" width="92" height="6" rx="3" fill="#ECE7FF"/><rect x="50" y="138" width="46" height="8" rx="4" fill="#D9F8EF"/></g>
@@ -201,8 +201,8 @@
 <g class="art-check"><circle cx="294" cy="58" r="21" fill="#D9F8EF"/><path d="M284 58L291 65L304 51" stroke="#14A582" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
 <circle cx="66" cy="187" r="9" fill="url(#svgFreshGrad)"/><rect x="276" y="177" width="48" height="20" rx="6" fill="url(#svgWarmGrad)"/><path d="M74 217V231M67 224H81" stroke="#7B5CFF" stroke-width="3" stroke-linecap="round"/><path d="M311 132V144M305 138H317" stroke="#FFC83D" stroke-width="3" stroke-linecap="round"/>
 </svg><div class="illustration-bottom"><span><i></i> Étudiants, entreprises, possibilités.</span><span>✦</span></div></div>
-<a href="offer.html?id=offer-course" class="float-card float-card-2"><span class="float-icon u-background-mint-100 u-color-mint-600">✓</span><span><strong>Apprenez. Progressez.</strong><small>Formations & nouvelles compétences</small></span></a>
-<div class="float-card float-card-3"><span class="float-icon u-background-coral-100 u-color-coral-600">✦</span><span><strong>Un talent, une opportunité.</strong><small>À votre rythme, près de vous.</small></span></div></div>
+<a href="offer.html?id=offer-course" class="float-card float-card-2"><span class="float-icon u-background-mint-100 u-color-mint-600">✓</span><span><strong data-i18n="interface.copy.learnGrow">Apprenez. Progressez.</strong><small data-i18n="interface.copy.coursesNewSkills">Formations & nouvelles compétences</small></span></a>
+<div class="float-card float-card-3"><span class="float-icon u-background-coral-100 u-color-coral-600">✦</span><span><strong data-i18n="interface.copy.aTalentAnOpportunity">Un talent, une opportunité.</strong><small data-i18n="interface.copy.atYourPaceNearYou">À votre rythme, près de vous.</small></span></div></div>
       </div>
     </section>
 
@@ -233,7 +233,7 @@
     <!-- ======================================================================
          SCROLLING CATEGORY MARQUEE
          ====================================================================== -->
-    <section class="marquee-section" id="marquee-section" aria-label="Catégories d’offres">
+    <section class="marquee-section" id="marquee-section" aria-label="Catégories d’offres" data-i18n-aria-label="categoriesLabel">
       <div class="marquee-viewport">
         <div class="marquee-track" id="marquee-track-1"></div>
         <div class="marquee-track" id="marquee-track-2" aria-hidden="true" inert></div>
@@ -258,9 +258,9 @@
           </div>
         </div>
 
-        <div class="offer-groups" role="group" aria-label="Familles d’offres">
-<button class="offer-group" type="button" aria-label="Emplois & travail" data-offer-group="work" aria-pressed="false"><svg class="offer-group-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#ui-7"></use></svg><span class="offer-group-copy"><strong data-i18n="workTitle">Emplois & travail</strong><span data-i18n="workDescription">Emploi, temps partiel et travail indépendant</span></span></button>
-<button class="offer-group" type="button" aria-label="Services, stages & apprentissage" data-offer-group="development" aria-pressed="false"><svg class="offer-group-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#ui-8"></use></svg><span class="offer-group-copy"><strong data-i18n="developmentTitle">Services, stages & apprentissage</strong><span data-i18n="developmentDescription">Stages, services étudiants, formations et conférences</span></span></button></div>
+        <div class="offer-groups" role="group" aria-label="Familles d’offres" data-i18n-aria-label="familiesLabel">
+<button class="offer-group" type="button" aria-label="Emplois & travail" data-i18n-aria-label="workTitle" data-offer-group="work" aria-pressed="false"><svg class="icon icon-lg offer-group-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="24" aria-hidden="true"><use href="#ui-7"></use></svg><span class="offer-group-copy"><strong data-i18n="workTitle">Emplois & travail</strong><span data-i18n="workDescription">Emploi, temps partiel et travail indépendant</span></span></button>
+<button class="offer-group" type="button" aria-label="Services, stages & apprentissage" data-i18n-aria-label="developmentTitle" data-offer-group="development" aria-pressed="false"><svg class="icon icon-lg offer-group-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="24" aria-hidden="true"><use href="#ui-8"></use></svg><span class="offer-group-copy"><strong data-i18n="developmentTitle">Services, stages & apprentissage</strong><span data-i18n="developmentDescription">Stages, services étudiants, formations et conférences</span></span></button></div>
 <!-- Interactive Search & Filters Toolbar -->
         <div class="missions-toolbar reveal">
           <div class="toolbar-top-row">
@@ -270,7 +270,7 @@
                 type="search"
                 id="mission-search-input"
                 class="input-field"
-                placeholder="Rechercher par titre, compétence ou ville..."
+                placeholder="Rechercher par titre, compétence ou ville..." data-i18n-placeholder="searchPlaceholder"
                 data-i18n-placeholder="searchPlaceholder"
               />
             </div>
@@ -279,9 +279,9 @@
               <label for="wilaya-filter" class="form-label" data-i18n="locationLabel">Localisation</label>
               <select id="wilaya-filter" class="input-field">
                 <option value="all" data-i18n="allLocations">Toutes les wilayas</option>
-                <option value="Alger">Alger</option>
-                <option value="Oran">Oran</option>
-                <option value="Constantine">Constantine</option>
+                <option value="Alger" data-i18n="demo.offers.offer-internship.commune">Alger</option>
+                <option value="Oran" data-i18n="demo.offers.offer-service.commune">Oran</option>
+                <option value="Constantine" data-i18n="demo.offers.offer-conference.commune">Constantine</option>
                 <option value="Sétif">Sétif</option>
                 <option value="Bordj Bou Arreridj">Bordj Bou Arreridj</option>
                 <option value="remote" data-i18n="remoteOnly">100% Télétravail</option>
@@ -302,7 +302,7 @@
             </button>
           </div>
 
-          <div class="offer-extra-filters"><label for="opportunity-filter"><span data-i18n="typeLabel">Type d’opportunité</span><select class="input-field" id="opportunity-filter"><option value="all">Tous les types</option></select></label><label for="closing-filter"><span data-i18n="closingLabel">Clôture à partir du</span><input class="input-field" id="closing-filter" type="date" aria-describedby="closing-format"><small id="closing-format" data-i18n="dateHint">jj/mm/aaaa</small></label></div>
+          <div class="offer-extra-filters"><label for="opportunity-filter"><span data-i18n="typeLabel">Type d’opportunité</span><select class="input-field" id="opportunity-filter"><option value="all" data-i18n="allTypes">Tous les types</option></select></label><label for="closing-filter"><span data-i18n="closingLabel">Clôture à partir du</span><input class="input-field" id="closing-filter" type="date" aria-describedby="closing-format"><small id="closing-format" data-i18n="dateHint">jj/mm/aaaa</small></label></div>
 <!-- Filter Pills with Sliding Active Indicator -->
           <div class="filter-pills-scroll">
             <div class="filter-pills-track" id="filter-pills-track" role="tablist" aria-label="Catégories de offres">
@@ -381,7 +381,7 @@
           <div class="trust-pillars">
             <div class="trust-pillar-card">
               <div class="pillar-icon u-background-brand-100 u-color-brand-600">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ui-6"></use></svg>
+                <svg class="icon icon-lg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="24"><use href="#ui-6"></use></svg>
               </div>
               <div>
                 <h3 class="u-font-size-text-base u-margin-block-end-0-25rem" data-i18n="trustPillar1Title">Vérification Carte Étudiant MESRS / Progrès</h3>
@@ -391,7 +391,7 @@
 
             <div class="trust-pillar-card">
               <div class="pillar-icon u-background-mint-100 u-color-mint-600">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ui-7"></use></svg>
+                <svg class="icon icon-lg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="24"><use href="#ui-7"></use></svg>
               </div>
               <div>
                 <h3 class="u-font-size-text-base u-margin-block-end-0-25rem" data-i18n="trustPillar2Title">Paiement Séquestre BaridiMob &amp; SATIM (CIB / Edahabia)</h3>
@@ -401,7 +401,7 @@
 
             <div class="trust-pillar-card">
               <div class="pillar-icon u-background-sun-100 u-color-sun-600">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ui-8"></use></svg>
+                <svg class="icon icon-lg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="24"><use href="#ui-8"></use></svg>
               </div>
               <div>
                 <h3 class="u-font-size-text-base u-margin-block-end-0-25rem" data-i18n="trustPillar3Title">Cadre Légal Auto-Entrepreneur (Loi n° 22-23 &amp; ANAE)</h3>
@@ -528,7 +528,7 @@
       <div class="modal-header">
         <div>
           <span class="badge u-background-brand-100 u-color-brand-700 u-margin-block-end-0-35rem" data-i18n="modalApplyBadge">Candidature Express en 1 clic</span>
-          <h2 class="u-font-size-text-xl" id="apply-modal-title">Postuler à la offre</h2>
+          <h2 class="u-font-size-text-xl" id="apply-modal-title" data-i18n="interface.copy.applyForTheOffer">Postuler à la offre</h2>
         </div>
         <button type="button" class="modal-close-btn" id="close-apply-modal" aria-label="Fermer">✕</button>
       </div>
@@ -587,14 +587,14 @@
       </div>
 
       <form id="post-mission-form">
-<div class="offer-form-grid"><div><label class="form-label" for="post-group">Famille d’offres</label><select class="input-field" id="post-group"><option value="work">Emplois & travail</option><option value="development">Services, stages & apprentissage</option></select></div><div><label class="form-label" for="post-type">Type d’opportunité</label><select class="input-field" id="post-type" required></select></div><div><label class="form-label" for="post-closes">Date de clôture</label><input class="input-field" type="date" id="post-closes" required></div></div>
-<button type="button" class="btn btn-secondary" id="post-template">Utiliser un exemple de stage informatique</button><p class="ws-sub">L’exemple remplit les sections ci-dessous. Personnalisez-les avant de publier.</p>
+<div class="offer-form-grid"><div><label class="form-label" for="post-group" data-i18n="interface.copy.offerFamily">Famille d’offres</label><select class="input-field" id="post-group"><option value="work" data-i18n="workTitle">Emplois & travail</option><option value="development" data-i18n="developmentTitle">Services, stages & apprentissage</option></select></div><div><label class="form-label" for="post-type" data-i18n="typeLabel">Type d’opportunité</label><select class="input-field" id="post-type" required></select></div><div><label class="form-label" for="post-closes" data-i18n="interface.copy.closingDate">Date de clôture</label><input class="input-field" type="date" id="post-closes" required></div></div>
+<button type="button" class="btn btn-secondary" id="post-template" data-i18n="interface.copy.useAnItInternshipExample">Utiliser un exemple de stage informatique</button><p class="ws-sub" data-i18n="interface.copy.theExampleFillsTheSectionsBelowCustomizeThem">L’exemple remplit les sections ci-dessous. Personnalisez-les avant de publier.</p>
         <div class="form-group">
-          <label for="post-mode" class="form-label">Mode de travail</label>
+          <label for="post-mode" class="form-label" data-i18n="interface.copy.workMode">Mode de travail</label>
           <select id="post-mode" class="input-field">
-            <option value="onsite">Sur place</option>
-            <option value="remote">Télétravail · 100 % à distance</option>
-            <option value="hybrid">Hybride · Sur place et à distance</option>
+            <option value="onsite" data-i18n="common.copy.onSite">Sur place</option>
+            <option value="remote" data-i18n="interface.copy.remoteFullyRemote">Télétravail · 100 % à distance</option>
+            <option value="hybrid" data-i18n="interface.copy.hybridOnSiteAndRemote">Hybride · Sur place et à distance</option>
           </select>
         </div>
         <div class="form-group">
@@ -619,9 +619,9 @@
           <div class="form-group">
             <label for="post-wilaya-select" class="form-label" data-i18n="labelWilaya">Wilaya</label>
             <select id="post-wilaya-select" class="input-field">
-              <option value="Alger">Alger</option>
-              <option value="Oran">Oran</option>
-              <option value="Constantine">Constantine</option>
+              <option value="Alger" data-i18n="demo.offers.offer-internship.commune">Alger</option>
+              <option value="Oran" data-i18n="demo.offers.offer-service.commune">Oran</option>
+              <option value="Constantine" data-i18n="demo.offers.offer-conference.commune">Constantine</option>
               <option value="Sétif">Sétif</option>
               <option value="Bordj Bou Arreridj">Bordj Bou Arreridj</option>
             </select>
@@ -646,20 +646,20 @@
         </div>
 
         <div class="form-group">
-          <label for="post-description" class="form-label">Description et tâches à réaliser</label>
+          <label for="post-description" class="form-label" data-i18n="interface.copy.descriptionAndTasks">Description et tâches à réaliser</label>
           <textarea id="post-description" class="input-field" rows="4" required minlength="20" maxlength="3000" placeholder="Décrivez le projet, les tâches et les livrables attendus…"></textarea>
         </div>
         <div class="form-group">
-          <label for="post-requirements" class="form-label">Profil recherché · un point par ligne</label>
+          <label for="post-requirements" class="form-label" data-i18n="interface.copy.requiredProfileOneItemPerLine">Profil recherché · un point par ligne</label>
           <textarea id="post-requirements" class="input-field" rows="3" required maxlength="2000" placeholder="Ex. : Figma, français courant, ordinateur personnel…"></textarea>
         </div>
-        <fieldset class="post-structured"><legend>Détails de l’offre</legend><small>Écrivez un élément par ligne : chaque ligne deviendra une puce sur la page de l’offre.</small>
-<label for="post-duties">Tâches & responsabilités</label><textarea id="post-duties" class="input-field" rows="5" maxlength="4000" required placeholder="Analyser les besoins et rédiger les spécifications.&#10;Contribuer au développement web et mobile."></textarea>
-<label for="post-languages">Compétences linguistiques</label><textarea id="post-languages" class="input-field" rows="3" maxlength="1500" required placeholder="Arabe : courant.&#10;Français : courant.&#10;Anglais : bon niveau."></textarea>
-<label for="post-qualities">Qualités requises</label><textarea id="post-qualities" class="input-field" rows="3" maxlength="1500" required placeholder="Autonomie et respect des délais.&#10;Esprit d’analyse.&#10;Curiosité technique."></textarea>
-<label for="post-conditions">Conditions de travail / participation</label><textarea id="post-conditions" class="input-field" rows="4" maxlength="2000" required placeholder="Type de contrat : stage.&#10;Durée : 6 mois.&#10;Environnement : hybride."></textarea></fieldset>
+        <fieldset class="post-structured"><legend data-i18n="interface.copy.offerDetails">Détails de l’offre</legend><small data-i18n="interface.copy.writeOneItemPerLineEachLineBecomes">Écrivez un élément par ligne : chaque ligne deviendra une puce sur la page de l’offre.</small>
+<label for="post-duties" data-i18n="common.copy.dutiesResponsibilities">Tâches & responsabilités</label><textarea id="post-duties" class="input-field" rows="5" maxlength="4000" required placeholder="Analyser les besoins et rédiger les spécifications.&#10;Contribuer au développement web et mobile."></textarea>
+<label for="post-languages" data-i18n="common.copy.languageSkills">Compétences linguistiques</label><textarea id="post-languages" class="input-field" rows="3" maxlength="1500" required placeholder="Arabe : courant.&#10;Français : courant.&#10;Anglais : bon niveau."></textarea>
+<label for="post-qualities" data-i18n="common.copy.requiredQualities">Qualités requises</label><textarea id="post-qualities" class="input-field" rows="3" maxlength="1500" required placeholder="Autonomie et respect des délais.&#10;Esprit d’analyse.&#10;Curiosité technique."></textarea>
+<label for="post-conditions" data-i18n="interface.copy.workParticipationConditions">Conditions de travail / participation</label><textarea id="post-conditions" class="input-field" rows="4" maxlength="2000" required placeholder="Type de contrat : stage.&#10;Durée : 6 mois.&#10;Environnement : hybride."></textarea></fieldset>
 <div class="form-group">
-          <label for="post-schedule" class="form-label">Disponibilité et horaires</label>
+          <label for="post-schedule" class="form-label" data-i18n="interface.copy.availabilityAndSchedule">Disponibilité et horaires</label>
           <input id="post-schedule" class="input-field" maxlength="180" placeholder="Ex. : week-end, horaires flexibles, début le 20 novembre" />
         </div>
         <div class="u-display-flex u-justify-content-flex-end u-gap-space-2 u-margin-block-start-space-4">
@@ -677,7 +677,7 @@
     <div class="modal-dialog">
       <div class="modal-header">
         <div>
-          <span class="badge u-background-violet-100 u-color-violet-500 u-margin-block-end-0-35rem">Session Démo Interactive</span>
+          <span class="badge u-background-violet-100 u-color-violet-500 u-margin-block-end-0-35rem" data-i18n="interface.copy.interactiveDemoSession">Session Démo Interactive</span>
           <h2 class="u-font-size-text-xl" id="login-modal-title" data-i18n="btnLogin">Connexion</h2>
         </div>
         <button type="button" class="modal-close-btn" id="close-login-modal" aria-label="Fermer">✕</button>
@@ -691,16 +691,16 @@
         <button type="button" class="trust-pillar-card u-inline-size-100 u-text-align-start u-cursor-pointer u-border-1-5px-solid-brand-500" id="demo-role-student">
           <div class="pillar-icon u-background-brand-100 u-color-brand-600 u-font-weight-800">YB</div>
           <div>
-            <div class="u-font-weight-800 u-color-ink">Yasmine Belkacem (Étudiante USTHB)</div>
-            <div class="u-font-size-text-xs u-color-muted">Master 1 Génie Logiciel · Carte MESRS validée</div>
+            <div class="u-font-weight-800 u-color-ink" data-i18n="interface.copy.yasmineBelkacemUsthbStudent">Yasmine Belkacem (Étudiante USTHB)</div>
+            <div class="u-font-size-text-xs u-color-muted" data-i18n="interface.copy.year1MasterSInSoftwareEngineeringMesrs">Master 1 Génie Logiciel · Carte MESRS validée</div>
           </div>
         </button>
 
         <button type="button" class="trust-pillar-card u-inline-size-100 u-text-align-start u-cursor-pointer" id="demo-role-employer">
           <div class="pillar-icon u-background-coral-100 u-color-coral-600 u-font-weight-800">KT</div>
           <div>
-            <div class="u-font-weight-800 u-color-ink">Karim Touati — PME InnovDigital</div>
-            <div class="u-font-size-text-xs u-color-muted">Recruteur Vérifié · Alger (Dely Ibrahim)</div>
+            <div class="u-font-weight-800 u-color-ink" data-i18n="interface.copy.karimTouatiInnovdigitalSme">Karim Touati — PME InnovDigital</div>
+            <div class="u-font-size-text-xs u-color-muted" data-i18n="interface.copy.verifiedRecruiterAlgiersDelyIbrahim">Recruteur Vérifié · Alger (Dely Ibrahim)</div>
           </div>
         </button>
       </div>
@@ -713,9 +713,9 @@
   <!-- ======================================================================
        VANILLA JAVASCRIPT APPLICATION LOGIC
        ====================================================================== -->
-  <script src="offers-data.js"></script>
-  <script src="script.js"></script>
-  <script src="dashboard.js"></script>
-  <script src="offers-catalog.js"></script>
+  <script src="offers-data.js" defer></script>
+  <script src="script.js" defer></script>
+  <script src="dashboard.js" defer></script>
+  <script src="offers-catalog.js" defer></script>
 </body>
 </html>

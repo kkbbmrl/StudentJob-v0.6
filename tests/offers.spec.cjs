@@ -59,7 +59,7 @@ test('mobile company directory and long offer pages fit without horizontal scrol
  await page.setViewportSize({width:390,height:844});
  await page.goto(home.replace('index.html','companies.html'));
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
- await page.locator('.company-actions a').first().click();
+ await page.locator('.company-card').filter({hasText:'InnovDigital'}).locator('.company-actions a').click();
  await expect(page.locator('h1')).toHaveText('InnovDigital');
  await page.locator('#company-offers a').last().click();
  await expect(page).toHaveURL(/offer.html\?id=/);

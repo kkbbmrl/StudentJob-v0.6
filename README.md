@@ -4,8 +4,17 @@ A student opportunities prototype for Algeria.
 
 ## Open the website
 
-Open `index.html` in a browser. No installation or build is needed.
-The optional Google Fonts fall back to system fonts when offline.
+For real accounts and cross-device applications, install Node.js 24 or newer, then run:
+
+    npm install
+    npm start
+
+Open http://localhost:3000 on this computer. Other devices must use the same server's
+network address (or its deployed public URL). Keep the server running.
+
+Opening index.html directly remains a browser-local demonstration. It cannot deliver
+applications to another device. See [SERVER.md](SERVER.md) for server setup, company
+ownership invitations, persistence and deployment.
 
 ## Offers
 
@@ -39,17 +48,28 @@ date, remuneration, duration, introduction, and five structured detail sections.
 Write one point per line to create bullet lists. **Utiliser un exemple de stage
 informatique** fills a sample that can be edited before publication.
 
-## Prototype storage
+## Application storage
 
-Profiles, posted offers, applications, and moderation are stored in this browser.
-**Réinitialiser la démo** restores the sample data. Accounts, payments, companies,
-and verification are simulated; there is no backend or real authentication.
+The Node server stores accounts, recruiter-owned offers and application messages in
+.data/studentjob.sqlite. Recruiters see only applications to their own offers, including
+the complete message, applicant name/email, unread state and review actions. Students
+see delivery/read/review status in their own account. Sessions use HttpOnly cookies.
 
-Seeded offers have stable URLs when the site is hosted. A local `file:` URL is only
-usable on the same computer. Newly posted demo offers exist only in the posting
-browser; sharing those between users requires shared server storage.
-The original marketplace supports FR/EN/AR. New offer pages, companies, and dashboards
-currently use French.
+Existing sample offers need a registered recruiter owner before accepting real
+applications. Create a private one-use invitation with:
+
+    npm run invite:company -- mis_001
+
+Give the invitation to the intended company representative to use during recruiter
+registration. No default recruiter password is provided. New recruiter accounts can
+publish their own offers immediately.
+
+The optional file-preview demonstration still stores its data only in that browser.
+Its recruiter table now displays the saved message and contact details, including
+applications made before the demo workspace was first opened. Old local records are
+preserved; they are not silently uploaded into real accounts.
+
+FR/EN/AR language support applies to public pages and account/inbox screens.
 
 ## Files
 
@@ -93,3 +113,12 @@ Fonts and image assets are self-hosted in assets/.
 
 Run npm install and npm test to check the prototype and design regressions.
 See [DESIGN_VERIFICATION.md](DESIGN_VERIFICATION.md) for the audit and verification results.
+
+
+## Languages and company components
+
+Every public page and workspace uses i18n.js with separate FR/EN/AR dictionaries.
+Run npm run check:i18n for key parity and the source-copy inventory.
+Company directory/profile views are in company-pages.js; offer-card.js is shared
+with the homepage. The named icon gallery is in design-system.html.
+See DESIGN_SYSTEM.md for component and translation contracts.
