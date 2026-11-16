@@ -1,0 +1,30 @@
+{
+  "layoutCases": 15,
+  "languages": [
+    "fr",
+    "en",
+    "ar"
+  ],
+  "widths": [
+    360,
+    768,
+    1024,
+    1440,
+    1920
+  ],
+  "controlHeight": 48,
+  "testsPassed": 17,
+  "axeViolations": 0,
+  "lighthouse": {
+    "before": {
+      "performance": 74,
+      "accessibility": 100,
+      "best-practices": 96
+    },
+    "after": {
+      "performance": 81,
+      "accessibility": 100,
+      "best-practices": 100
+    }
+  }
+}

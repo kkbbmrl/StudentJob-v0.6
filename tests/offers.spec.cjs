@@ -1,0 +1,70 @@
+const {test,expect}=require('@playwright/test');
+const {pathToFileURL}=require('node:url');
+const path=require('node:path');
+const home=pathToFileURL(path.resolve('index.html')).href;
+test('offers open a full page with bullet sections, sharing and persistent applications',async({page})=>{
+ await page.goto(home);
+ await page.getByRole('button',{name:/^Services, stages & apprentissage/}).click();
+ await page.locator('#opportunity-filter').selectOption('internship');
+ await page.locator('#missions-grid .mission-detail-link').first().click();
+ await expect(page).toHaveURL(/offer.html\?id=/);
+ await expect(page.locator('#offer-content h1')).toContainText('Stage');
+ await expect(page.locator('#offer-content section ul')).toHaveCount(5);
+ await page.locator('#share-offer').click();
+ await expect(page.locator('#share-url')).toBeVisible();
+ await page.locator('#offer-apply').click();
+ await page.getByLabel('Message de candidature').fill('Je souhaite participer à cette opportunité.');
+ await page.locator('#offer-application button[type=submit]').click();
+ await expect(page.locator('#offer-apply')).toHaveText('Candidature envoyée');
+ await page.reload();
+ await expect(page.locator('#offer-apply')).toBeDisabled();
+});
+test('company directory filters and opens company profiles with associated offers',async({page})=>{
+ await page.goto(home.replace('index.html','companies.html'));
+ await page.getByLabel('Nom de l’entreprise').fill('InnovDigital');
+ await expect(page.locator('.company-card')).toHaveCount(1);
+ await page.getByRole('link',{name:'Voir l’entreprise',exact:true}).click();
+ await expect(page.locator('h1')).toHaveText('InnovDigital');
+ await expect(page.locator('#company-offers a')).not.toHaveCount(0);
+});
+test('catalog combines category, location, closing date and opportunity filters',async({page})=>{
+ await page.goto(home);
+ await page.locator('[data-offer-group="development"]').click();
+ await page.locator('#opportunity-filter').selectOption('conference');
+ await page.locator('#wilaya-filter').selectOption('Constantine');
+ await expect(page.locator('#missions-grid .mission-card')).toHaveCount(1);
+ await page.locator('#closing-filter').fill('2027-01-01');
+ await expect(page.locator('#missions-grid .mission-card')).toHaveCount(0);
+ await page.locator('#reset-filters-btn').click();
+ await expect(page.locator('#missions-grid .mission-card')).toHaveCount(13);
+});
+test('closed and hidden offers cannot accept applications; missing URLs are handled',async({page})=>{
+ await page.goto(home);
+ await page.evaluate(()=>{
+  const source=OfferStore.get('offer-internship');
+  OfferStore.add({...source,id:'closed-test',closesOn:'2020-01-01'});
+ });
+ await page.goto(home.replace('index.html','offer.html?id=closed-test'));
+ await expect(page.locator('#offer-apply')).toBeDisabled();
+ await expect(page.locator('#offer-apply')).toHaveText('Offre clôturée');
+ expect(await page.evaluate(()=>OfferStore.apply('closed-test','Test'))).toBe(false);
+ await page.evaluate(()=>OfferStore.write('jobetudiant_workspace',{hidden:['offer-internship'],paused:[]}));
+ await page.goto(home.replace('index.html','offer.html?id=offer-internship'));
+ await expect(page.locator('h1')).toHaveText('Offre indisponible');
+ expect(await page.evaluate(()=>OfferStore.apply('offer-internship','Test'))).toBe(false);
+ await page.goto(home.replace('index.html','offer.html?id=unknown'));
+ await expect(page.locator('h1')).toHaveText('Offre indisponible');
+});
+test('mobile company directory and long offer pages fit without horizontal scroll',async({page})=>{
+ await page.setViewportSize({width:390,height:844});
+ await page.goto(home.replace('index.html','companies.html'));
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.locator('.company-actions a').first().click();
+ await expect(page.locator('h1')).toHaveText('InnovDigital');
+ await page.locator('#company-offers a').last().click();
+ await expect(page).toHaveURL(/offer.html\?id=/);
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.locator('#share-offer').scrollIntoViewIfNeeded();
+ await page.locator('#share-offer').click();
+ await expect(page.locator('#share-url')).toBeVisible();
+});

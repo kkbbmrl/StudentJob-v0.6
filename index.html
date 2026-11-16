@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+<script>(function(){var language;try{language=JSON.parse(localStorage.getItem('jobetudiant_lang'));}catch(e){}if(!['fr','en','ar'].includes(language)){language=(navigator.language||'fr').split('-')[0];if(!['fr','en','ar'].includes(language))language='fr';}document.documentElement.lang=language;document.documentElement.dir=language==='ar'?'rtl':'ltr';document.documentElement.classList.add('i18n-pending');})();</script>
+<script src="i18n/fr.js"></script><script src="i18n/en.js"></script><script src="i18n/ar.js"></script><script src="i18n.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JobEtudiant — Offres courtes & jobs étudiants vérifiés en Algérie</title>
+  <meta name="description" content="La plateforme HRTech algérienne qui connecte les étudiants universitaires vérifiés aux PME et particuliers pour des offres flexibles rémunérées en DZD." />
+  
+  
+  
+
+  <link rel="stylesheet" href="styles.css" />
+  
+  
+
+<link rel="preload" as="font" href="assets/fonts/inter-latin-variable.woff2" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="tokens.css">
+
+<link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#4f6bff">
+<meta property="og:title" content="JobEtudiant — Des opportunités pour les étudiants">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/social/social-preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<script src="assets/icons/icons.js"></script><script src="offer-card.js"></script>
+<script src="ui.js" defer></script>
+</head>
+<body>
+  <!-- Skip to Main Content -->
+  <a href="#main-content" class="skip-link" id="skip-link-el">Aller au contenu principal</a>
+
+  <!-- Top Scroll Progress Bar -->
+  <div class="scroll-progress-track" aria-hidden="true">
+    <div class="scroll-progress-bar" id="scroll-progress"></div>
+  </div>
+
+  <!-- Confetti Layer -->
+  <div class="confetti-layer" id="confetti-layer" aria-hidden="true"></div>
+
+  <!-- Sticky Header -->
+  <header class="site-header marketplace-header" id="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand-logo" aria-label="JobEtudiant DZ — Accueil">
+        <span class="brand-logo-mark" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+          </svg>
+        </span>
+        <span>JobEtudiant</span>
+        <span class="brand-logo-tag">DZ</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Navigation principale">
+        <a href="companies.html" class="nav-link" data-i18n="navCompanies">Entreprises</a>
+        <a href="#missions" class="nav-link" data-i18n="navMissions">Offres</a>
+        <a href="#how-it-works" class="nav-link" data-i18n="navHow">Comment ça marche</a>
+        <a href="#trust" class="nav-link" data-i18n="navTrust">Paiement & Sécurité</a>
+        <a href="#testimonials" class="nav-link" data-i18n="navStories">Témoignages</a>
+        <a href="#faq" class="nav-link" data-i18n="navFaq">FAQ</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Saved Missions Counter -->
+        <button type="button" class="saved-counter-btn" id="saved-filter-toggle" aria-pressed="false" title="Offres sauvegardées">
+          <svg class="u-color-coral-500" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><use href="#ui-1"></use></svg>
+          <span class="saved-count-pill" id="saved-count-badge">2</span>
+        </button>
+
+        <!-- Language Switcher (FR / EN / AR) -->
+        <div class="lang-switcher" role="group" aria-label="Sélecteur de langue">
+          <button type="button" class="lang-btn" data-lang="fr" aria-pressed="true">FR</button>
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+          <button type="button" class="lang-btn" data-lang="ar" aria-pressed="false">عربي</button>
+        </div>
+
+        <button type="button" class="btn btn-ghost desktop-only-btn" id="login-btn" data-i18n="btnLogin">Connexion</button>
+        <button type="button" class="btn btn-primary desktop-only-btn" id="header-post-btn">
+          <span data-i18n="ctaSecondary">Publier une offre</span>
+        </button>
+
+        <button type="button" class="mobile-menu-toggle" id="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><use href="#ui-2"></use></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-drawer">
+      <ul class="mobile-nav-list">
+        <li><a href="companies.html" class="nav-link" data-i18n="navCompanies">Entreprises</a></li>
+        <li><a href="#missions" class="nav-link mobile-nav-item" data-i18n="navMissions">Offres</a></li>
+        <li><a href="#how-it-works" class="nav-link mobile-nav-item" data-i18n="navHow">Comment ça marche</a></li>
+        <li><a href="#trust" class="nav-link mobile-nav-item" data-i18n="navTrust">Paiement & Sécurité</a></li>
+        <li><a href="#testimonials" class="nav-link mobile-nav-item" data-i18n="navStories">Témoignages</a></li>
+        <li><a href="#faq" class="nav-link mobile-nav-item" data-i18n="navFaq">FAQ</a></li>
+      </ul>
+      <div class="mobile-nav-actions">
+        <button type="button" class="btn btn-secondary" id="mobile-login-btn" data-i18n="btnLogin">Connexion</button>
+        <button type="button" class="btn btn-primary" id="mobile-post-btn" data-i18n="ctaSecondary">Publier une offre</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ======================================================================
+         HERO SECTION
+         ====================================================================== -->
+    <section class="hero-section" id="top">
+      <div class="ambient-blobs" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+      </div>
+
+      <div class="container hero-grid">
+        <!-- Left Column: Value Prop & Instant Search -->
+        <div class="hero-copy">
+          <div class="live-pill">
+            <span class="live-dot-wrap" aria-hidden="true">
+              <span class="live-dot-ring"></span>
+              <span class="live-dot-core"></span>
+            </span>
+            <span id="live-badge-text" data-i18n="liveMissionsBadge">12 nouvelles offres publiées aujourd'hui</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span data-i18n="heroTitlePrefix">Gagnez en expérience et en DZD grâce aux offres de</span>
+            <span class="gradient-word-wrap">
+              <span class="gradient-word" id="rotating-word">soutien scolaire</span>
+            </span>
+          </h1>
+
+          <p class="hero-subtitle" data-i18n="heroSubtitle">
+            La marketplace HRTech qui connecte les étudiants universitaires vérifiés en Algérie aux entreprises et particuliers pour des offres courtes, flexibles et payées en toute sécurité via BaridiMob ou CIB.
+          </p>
+
+          <!-- Fast Search Bar (< 3 clicks to relevant mission) -->
+          <form class="hero-search-bar" id="hero-search-form" role="search">
+            <div class="hero-search-input-group">
+              <svg class="u-color-brand-500 u-flex-shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ui-3"></use></svg>
+              <label for="hero-keyword-input" class="form-label" data-i18n="searchLabel">Rechercher une offre</label>
+              <input
+                type="search"
+                id="hero-keyword-input"
+                class="hero-search-input"
+                placeholder="Ex: Maths BEM, Canva, SAFEX, Excel..."
+                data-i18n-placeholder="heroSearchPlaceholder"
+              />
+            </div>
+
+            <label for="hero-wilaya-select" class="sr-only">Wilaya</label>
+            <select id="hero-wilaya-select" class="hero-city-select">
+              <option value="all" data-i18n="allLocations">Toutes les wilayas</option>
+              <option value="Alger">Alger</option>
+              <option value="Oran">Oran</option>
+              <option value="Constantine">Constantine</option>
+              <option value="Sétif">Sétif</option>
+              <option value="Bordj Bou Arreridj">Bordj Bou Arreridj</option>
+              <option value="remote" data-i18n="remoteOnly">100% Télétravail</option>
+            </select>
+
+            <button type="submit" class="btn btn-primary btn-lg" id="hero-find-btn">
+              <span data-i18n="ctaPrimary">Trouver une offre</span>
+              <svg class="btn-arrow rtl-flip" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#ui-4"></use></svg>
+            </button>
+          </form>
+
+          <div class="hero-cta-row">
+            <button type="button" class="btn btn-secondary" id="hero-post-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ui-5"></use></svg>
+              <span data-i18n="ctaSecondary">Publier une offre</span>
+            </button>
+
+            <div class="quick-tags-row">
+              <span data-i18n="popularLabel">Populaire :</span>
+              <button type="button" class="quick-tag-chip" data-quick-filter="tutoring">Soutien BEM/BAC</button>
+              <button type="button" class="quick-tag-chip" data-quick-filter="events">Hôtesses SAFEX</button>
+              <button type="button" class="quick-tag-chip" data-quick-filter="remote">Télétravail</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Custom Inline SVG Illustration + Floating Mission Cards -->
+        <div class="hero-stage restored-stage" id="hero-stage">
+<div class="illustration-halo" aria-hidden="true"></div>
+<a href="offer.html?id=offer-internship" class="float-card float-card-1"><span class="float-icon u-background-brand-100 u-color-brand-500">⌘</span><span><strong>Votre premier stage</strong><small>Web & mobile · Hybride</small></span><span class="float-arrow">↗</span></a>
+<div class="hero-illustration-card"><div class="illustration-top"><span class="illustration-dots"><i></i><i></i><i></i></span><span>VOTRE AVENIR COMMENCE ICI</span><span class="illustration-spark">✳</span></div>
+<svg class="student-illustration" viewBox="0 0 360 280" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="student-art-title"><title id="student-art-title">Un étudiant prépare son avenir sur son ordinateur, entouré d’opportunités</title><defs><linearGradient id="svgBrandGrad" x1="40" y1="40" x2="290" y2="240" gradientUnits="userSpaceOnUse"><stop stop-color="#4F6BFF"/><stop offset="1" stop-color="#7B5CFF"/></linearGradient><linearGradient id="svgFreshGrad"><stop stop-color="#14C8A0"/><stop offset="1" stop-color="#38BDF8"/></linearGradient><linearGradient id="svgWarmGrad"><stop stop-color="#FF6B5A"/><stop offset="1" stop-color="#FFC83D"/></linearGradient></defs>
+<circle cx="181" cy="140" r="113" fill="#F3F5FF"/><circle cx="181" cy="140" r="92" stroke="#E4E9FF" stroke-dasharray="3 7"/>
+<g class="art-window"><rect x="34" y="42" width="174" height="119" rx="14" fill="white" stroke="#E4E9FF" stroke-width="2"/><path d="M34 68H208" stroke="#E4E9FF"/><circle cx="48" cy="55" r="3" fill="#FF6B5A"/><circle cx="59" cy="55" r="3" fill="#FFC83D"/><circle cx="70" cy="55" r="3" fill="#14C8A0"/><rect x="50" y="85" width="76" height="10" rx="5" fill="url(#svgBrandGrad)"/><rect x="50" y="107" width="118" height="6" rx="3" fill="#E4E9FF"/><rect x="50" y="121" width="92" height="6" rx="3" fill="#ECE7FF"/><rect x="50" y="138" width="46" height="8" rx="4" fill="#D9F8EF"/></g>
+<g class="art-student"><path d="M204 146C217 123 261 122 279 148L297 221H185L204 146Z" fill="url(#svgBrandGrad)"/><path d="M223 132V151C230 160 246 159 252 150V130" fill="#F6C7AC"/><ellipse cx="239" cy="105" rx="28" ry="33" fill="#FFDCC6"/><path d="M210 105C203 71 225 63 241 65C268 64 275 87 267 109L260 93C245 98 227 88 221 85L217 108L210 105Z" fill="#202749"/><path d="M210 83L240 70L276 83L241 98L210 83Z" fill="#0E1330"/><path d="M270 85V112" stroke="#FFC83D" stroke-width="3" stroke-linecap="round"/><circle cx="270" cy="115" r="4" fill="#FFC83D"/><path d="M230 115C235 120 242 120 247 115" stroke="#C87D69" stroke-width="2" stroke-linecap="round"/><path d="M206 164L180 200L201 211L226 181" fill="#F6C7AC"/><path d="M275 165L298 199L281 212L256 183" fill="#FFDCC6"/></g>
+<path d="M82 232H308" stroke="#D4DCF6" stroke-width="7" stroke-linecap="round"/>
+<g class="art-laptop"><path d="M112 158C111 153 115 149 120 149H222C226 149 229 152 230 156L244 223H128L112 158Z" fill="#E4E9FF" stroke="#C5CFFF" stroke-width="2"/><path d="M120 158H221L233 214H132L120 158Z" fill="white"/><path d="M158 177L149 185L161 192M184 177L195 185L187 192M176 173L169 197" stroke="url(#svgBrandGrad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M117 223H250L260 230H110L117 223Z" fill="#A7B5F1"/></g>
+<g class="art-check"><circle cx="294" cy="58" r="21" fill="#D9F8EF"/><path d="M284 58L291 65L304 51" stroke="#14A582" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+<circle cx="66" cy="187" r="9" fill="url(#svgFreshGrad)"/><rect x="276" y="177" width="48" height="20" rx="6" fill="url(#svgWarmGrad)"/><path d="M74 217V231M67 224H81" stroke="#7B5CFF" stroke-width="3" stroke-linecap="round"/><path d="M311 132V144M305 138H317" stroke="#FFC83D" stroke-width="3" stroke-linecap="round"/>
+</svg><div class="illustration-bottom"><span><i></i> Étudiants, entreprises, possibilités.</span><span>✦</span></div></div>
+<a href="offer.html?id=offer-course" class="float-card float-card-2"><span class="float-icon u-background-mint-100 u-color-mint-600">✓</span><span><strong>Apprenez. Progressez.</strong><small>Formations & nouvelles compétences</small></span></a>
+<div class="float-card float-card-3"><span class="float-icon u-background-coral-100 u-color-coral-600">✦</span><span><strong>Un talent, une opportunité.</strong><small>À votre rythme, près de vous.</small></span></div></div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         LIVE STATS SECTION (IntersectionObserver Count-up)
+         ====================================================================== -->
+    <section class="stats-section" aria-label="Statistiques en direct">
+      <div class="container stats-grid" id="stats-grid">
+        <div class="stat-card reveal">
+          <div class="stat-number"><span class="js-counter" data-target="4850">0</span>+</div>
+          <div class="stat-label" data-i18n="statStudents">Étudiants vérifiés (MESRS)</div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="stat-number"><span class="js-counter" data-target="1420">0</span>+</div>
+          <div class="stat-label" data-i18n="statMissions">Offres réalisées en Algérie</div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="stat-number"><span class="js-counter" data-target="98">0</span>%</div>
+          <div class="stat-label" data-i18n="statSatisfaction">Paiements versés en moins de 2h</div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="stat-number">&lt; <span class="js-counter" data-target="24">0</span>h</div>
+          <div class="stat-label" data-i18n="statSpeed">Délai moyen de recrutement</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SCROLLING CATEGORY MARQUEE
+         ====================================================================== -->
+    <section class="marquee-section" id="marquee-section" aria-label="Catégories d’offres">
+      <div class="marquee-viewport">
+        <div class="marquee-track" id="marquee-track-1"></div>
+        <div class="marquee-track" id="marquee-track-2" aria-hidden="true" inert></div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         FEATURED MISSIONS SECTION (Search, Sliding Pills, 9 Realistic Missions)
+         ====================================================================== -->
+    <section class="section-block marketplace" id="missions">
+      <div class="container">
+        <div class="section-header section-header-row reveal">
+          <div>
+            <span class="section-eyebrow" data-i18n="missionsEyebrow">Catalogue en temps réel</span>
+            <h2 class="section-title" data-i18n="missionsTitle">Offres disponibles près de votre campus</h2>
+            <p class="section-desc" data-i18n="missionsSubtitle">
+              Filtrez par compétence, wilaya ou télétravail et postulez en moins de 3 clics avec votre profil étudiant vérifié.
+            </p>
+          </div>
+          <div>
+            
+          </div>
+        </div>
+
+        <div class="offer-groups" role="group" aria-label="Familles d’offres">
+<button class="offer-group" type="button" aria-label="Emplois & travail" data-offer-group="work" aria-pressed="false"><svg class="offer-group-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#ui-7"></use></svg><span class="offer-group-copy"><strong data-i18n="workTitle">Emplois & travail</strong><span data-i18n="workDescription">Emploi, temps partiel et travail indépendant</span></span></button>
+<button class="offer-group" type="button" aria-label="Services, stages & apprentissage" data-offer-group="development" aria-pressed="false"><svg class="offer-group-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#ui-8"></use></svg><span class="offer-group-copy"><strong data-i18n="developmentTitle">Services, stages & apprentissage</strong><span data-i18n="developmentDescription">Stages, services étudiants, formations et conférences</span></span></button></div>
+<!-- Interactive Search & Filters Toolbar -->
+        <div class="missions-toolbar reveal">
+          <div class="toolbar-top-row">
+            <div>
+              <label for="mission-search-input" class="form-label" data-i18n="searchLabel">Rechercher une offre</label>
+              <input
+                type="search"
+                id="mission-search-input"
+                class="input-field"
+                placeholder="Rechercher par titre, compétence ou ville..."
+                data-i18n-placeholder="searchPlaceholder"
+              />
+            </div>
+
+            <div>
+              <label for="wilaya-filter" class="form-label" data-i18n="locationLabel">Localisation</label>
+              <select id="wilaya-filter" class="input-field">
+                <option value="all" data-i18n="allLocations">Toutes les wilayas</option>
+                <option value="Alger">Alger</option>
+                <option value="Oran">Oran</option>
+                <option value="Constantine">Constantine</option>
+                <option value="Sétif">Sétif</option>
+                <option value="Bordj Bou Arreridj">Bordj Bou Arreridj</option>
+                <option value="remote" data-i18n="remoteOnly">100% Télétravail</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="sort-select" class="form-label" data-i18n="sortLabel">Trier par</label>
+              <select id="sort-select" class="input-field">
+                <option value="featured" data-i18n="sortFeatured">Tri : Recommandées</option>
+                <option value="pay_desc" data-i18n="sortPayDesc">Rémunération ( décroissante )</option>
+                <option value="urgent" data-i18n="sortUrgent">Urgentes d'abord</option>
+              </select>
+            </div>
+
+            <button type="button" class="btn btn-secondary" id="reset-filters-btn" data-i18n="btnReset">
+              Réinitialiser
+            </button>
+          </div>
+
+          <div class="offer-extra-filters"><label for="opportunity-filter"><span data-i18n="typeLabel">Type d’opportunité</span><select class="input-field" id="opportunity-filter"><option value="all">Tous les types</option></select></label><label for="closing-filter"><span data-i18n="closingLabel">Clôture à partir du</span><input class="input-field" id="closing-filter" type="date" aria-describedby="closing-format"><small id="closing-format" data-i18n="dateHint">jj/mm/aaaa</small></label></div>
+<!-- Filter Pills with Sliding Active Indicator -->
+          <div class="filter-pills-scroll">
+            <div class="filter-pills-track" id="filter-pills-track" role="tablist" aria-label="Catégories de offres">
+              <div class="filter-active-indicator" id="filter-indicator" aria-hidden="true"></div>
+              <button type="button" role="tab" class="filter-pill-btn" data-category="all" aria-selected="true" data-i18n="catAll">Toutes</button>
+              <button type="button" role="tab" class="filter-pill-btn" data-category="tutoring" aria-selected="false" data-i18n="catTutoring">Soutien & Cours</button>
+              <button type="button" role="tab" class="filter-pill-btn" data-category="events" aria-selected="false" data-i18n="catEvents">Événementiel</button>
+              <button type="button" role="tab" class="filter-pill-btn" data-category="design" aria-selected="false" data-i18n="catDesign">Design</button>
+              <button type="button" role="tab" class="filter-pill-btn" data-category="writing" aria-selected="false" data-i18n="catWriting">Traduction</button>
+              <button type="button" role="tab" class="filter-pill-btn" data-category="tech" aria-selected="false" data-i18n="catTech">Tech & Saisie</button>
+              <button type="button" role="tab" class="filter-pill-btn" data-category="retail" aria-selected="false" data-i18n="catRetail">Vente & Retail</button>
+              <button type="button" role="tab" class="filter-pill-btn" data-category="delivery" aria-selected="false" data-i18n="catDelivery">Livraison & Flyers</button>
+            </div>
+          </div>
+
+          <!-- Interactive State Tester (Normal / Loading / Empty / Error) -->
+          <div class="state-sim-bar">
+            <span data-i18n="stateSimLabel">Tester les états d'interface (UX) :</span>
+            <div class="state-sim-buttons" role="group" aria-label="Simulateur d'état UI">
+              <button type="button" class="state-sim-btn" data-sim-state="ready" aria-pressed="true" data-i18n="stateNormal">Normal (9 offres)</button>
+              <button type="button" class="state-sim-btn" data-sim-state="loading" aria-pressed="false" data-i18n="stateLoading">Chargement (Skeletons)</button>
+              <button type="button" class="state-sim-btn" data-sim-state="empty" aria-pressed="false" data-i18n="stateEmpty">Vide (0 résultat)</button>
+              <button type="button" class="state-sim-btn" data-sim-state="error" aria-pressed="false" data-i18n="stateError">Erreur réseau</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="marketplace-results"><span class="badge u-background-brand-100 u-color-brand-700" id="results-count-live" aria-live="polite">
+              9 offres affichées
+            </span></div>
+<!-- Missions Grid Container -->
+        <div class="missions-grid" id="missions-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         HOW IT WORKS SECTION (Separate Tracks for Students & Employers)
+         ====================================================================== -->
+    <section class="section-block how-section" id="how-it-works">
+      <div class="container">
+        <div class="section-header reveal u-text-align-center u-align-items-center">
+          <span class="section-eyebrow" data-i18n="howEyebrow">Parcours simplifié</span>
+          <h2 class="section-title" data-i18n="howTitle">Comment fonctionne JobEtudiant ?</h2>
+          <p class="section-desc" data-i18n="howSubtitle">
+            Deux parcours pensés sur-mesure : que vous cherchiez à financer vos études ou à recruter un renfort qualifié dans la journée.
+          </p>
+
+          <div class="track-switcher" role="tablist" aria-label="Choisir le parcours">
+            <button type="button" role="tab" class="track-tab-btn" id="tab-student-track" data-track="student" aria-selected="true" data-i18n="trackStudentBtn">
+              🎓 Parcours Étudiant
+            </button>
+            <button type="button" role="tab" class="track-tab-btn" id="tab-employer-track" data-track="employer" aria-selected="false" data-i18n="trackEmployerBtn">
+              🏢 Parcours Recruteur
+            </button>
+          </div>
+        </div>
+
+        <div class="steps-grid" id="how-steps-grid"></div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         TRUST, PAYMENT SAFETY & DZD EARNINGS CALCULATOR
+         ====================================================================== -->
+    <section class="section-block" id="trust">
+      <div class="container trust-grid">
+        <div class="reveal">
+          <span class="section-eyebrow" data-i18n="trustEyebrow">Confiance & Conformité Algérie</span>
+          <h2 class="section-title u-margin-block-end-space-3" data-i18n="trustTitle">
+            Vos offres et vos Dinars sont protégés à chaque étape
+          </h2>
+          <p class="section-desc u-margin-block-end-space-6" data-i18n="trustSubtitle">
+            Fini le travail non payé ou les profils anonymes. JobEtudiant sécurise les deux parties grâce à la vérification universitaire et au séquestre BaridiMob / CIB.
+          </p>
+
+          <div class="trust-pillars">
+            <div class="trust-pillar-card">
+              <div class="pillar-icon u-background-brand-100 u-color-brand-600">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ui-6"></use></svg>
+              </div>
+              <div>
+                <h3 class="u-font-size-text-base u-margin-block-end-0-25rem" data-i18n="trustPillar1Title">Vérification Carte Étudiant MESRS / Progrès</h3>
+                <p class="u-font-size-text-sm u-color-muted" data-i18n="trustPillar1Desc">Chaque étudiant valide son certificat de scolarité universitaire (USTHB, ESI, Oran, Constantine, Sétif...) et sa pièce d'identité.</p>
+              </div>
+            </div>
+
+            <div class="trust-pillar-card">
+              <div class="pillar-icon u-background-mint-100 u-color-mint-600">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ui-7"></use></svg>
+              </div>
+              <div>
+                <h3 class="u-font-size-text-base u-margin-block-end-0-25rem" data-i18n="trustPillar2Title">Paiement Séquestre BaridiMob &amp; SATIM (CIB / Edahabia)</h3>
+                <p class="u-font-size-text-sm u-color-muted" data-i18n="trustPillar2Desc">Le montant est bloqué avant le début de la offre et transféré sur le RIP BaridiMob de l'étudiant dès validation.</p>
+              </div>
+            </div>
+
+            <div class="trust-pillar-card">
+              <div class="pillar-icon u-background-sun-100 u-color-sun-600">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#ui-8"></use></svg>
+              </div>
+              <div>
+                <h3 class="u-font-size-text-base u-margin-block-end-0-25rem" data-i18n="trustPillar3Title">Cadre Légal Auto-Entrepreneur (Loi n° 22-23 &amp; ANAE)</h3>
+                <p class="u-font-size-text-sm u-color-muted" data-i18n="trustPillar3Desc">Attestation d'expérience et reçu générés automatiquement, conformes au statut national de l'étudiant auto-entrepreneur et à la loi 18-07.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive DZD Payout Calculator -->
+        <div class="escrow-simulator-card reveal">
+          <div class="u-display-flex u-align-items-center u-justify-content-space-between u-margin-block-end-space-4">
+            <h3 class="u-font-size-text-xl" data-i18n="calcTitle">Simulateur de Revenu Étudiant</h3>
+            <span class="badge u-background-mint-100 u-color-mint-600" data-i18n="calcBadge">0% Commission Étudiant</span>
+          </div>
+
+          <div class="form-group">
+            <label for="calc-range" class="form-label u-display-flex u-justify-content-space-between">
+              <span data-i18n="calcSliderLabel">Montant de la offre :</span>
+              <strong class="u-color-brand-600" id="calc-gross-label">12 000 DZD</strong>
+            </label>
+            <input class="u-inline-size-100 u-accent-color-brand-500 u-cursor-pointer"
+              type="range"
+              id="calc-range"
+              min="2000"
+              max="35000"
+              step="500"
+              value="12000"
+             
+            />
+          </div>
+
+          <div class="sim-breakdown">
+            <div class="sim-row">
+              <span data-i18n="calcRowGross">Rémunération brute affichée</span>
+              <strong id="calc-row-gross">12 000 DZD</strong>
+            </div>
+            <div class="sim-row">
+              <span data-i18n="calcRowStudentFee">Frais prélevés à l'étudiant</span>
+              <strong class="u-color-mint-600">0 DZD (0%)</strong>
+            </div>
+            <div class="sim-row">
+              <span data-i18n="calcRowEmployerFee">Frais service recruteur (forfait fixe)</span>
+              <span id="calc-row-emp-fee">300 DZD</span>
+            </div>
+            <div class="sim-row is-total">
+              <span data-i18n="calcRowNet">Net viré sur votre BaridiMob</span>
+              <span id="calc-row-net">12 000 DZD</span>
+            </div>
+          </div>
+
+          <p class="u-font-size-text-xs u-color-muted u-margin-block-end-space-4" data-i18n="calcNote">
+            Les étudiants perçoivent 100% du tarif affiché. Le forfait de sécurisation (300 DZD) est réglé uniquement par le recruteur.
+          </p>
+
+          <button type="button" class="btn btn-primary u-inline-size-100" id="calc-cta-btn" data-i18n="ctaPrimary">
+            Trouver une offre
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         TESTIMONIALS SECTION
+         ====================================================================== -->
+    <section class="section-block testimonials-section" id="testimonials">
+      <div class="container">
+        <div class="section-header reveal u-text-align-center u-align-items-center">
+          <span class="section-eyebrow" data-i18n="storiesEyebrow">Communauté vérifiée</span>
+          <h2 class="section-title" data-i18n="storiesTitle">Ils utilisent JobEtudiant chaque semaine</h2>
+        </div>
+
+        <div class="testimonials-grid" id="testimonials-grid"></div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         FAQ ACCORDION SECTION
+         ====================================================================== -->
+    <section class="section-block" id="faq">
+      <div class="container">
+        <div class="section-header reveal u-text-align-center u-align-items-center">
+          <span class="section-eyebrow" data-i18n="faqEyebrow">Questions fréquentes</span>
+          <h2 class="section-title" data-i18n="faqTitle">Tout savoir avant de commencer</h2>
+        </div>
+
+        <div class="faq-list" id="faq-list"></div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         FINAL CTA BAND
+         ====================================================================== -->
+    <section class="section-block u-padding-block-start-0">
+      <div class="container">
+        <div class="cta-band reveal">
+          <h2 data-i18n="finalCtaTitle">Prêt à décrocher votre prochaine offre étudiante ?</h2>
+          <p data-i18n="finalCtaSub">
+            Rejoignez plus de 4 850 étudiants d'Alger, Oran, Constantine, Sétif et Bordj Bou Arreridj ou publiez votre besoin en 2 minutes.
+          </p>
+          <div class="u-display-flex u-flex-wrap-wrap u-justify-content-center u-gap-space-3">
+            <a href="#missions" class="btn btn-warm btn-lg" id="final-find-btn">
+              <span data-i18n="ctaPrimary">Trouver une offre</span>
+            </a>
+            <button type="button" class="btn btn-secondary btn-lg" id="final-post-btn" data-i18n="ctaSecondary">
+              Publier une offre
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================================
+       FOOTER
+       ====================================================================== -->
+  <footer data-shared-footer></footer>
+
+  <!-- ======================================================================
+       MODAL 1: APPLY TO MISSION DEMO (With Confetti + Animated SVG Checkmark)
+       ====================================================================== -->
+  <div class="modal-backdrop" id="apply-modal" role="dialog" aria-modal="true" aria-labelledby="apply-modal-title" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <span class="badge u-background-brand-100 u-color-brand-700 u-margin-block-end-0-35rem" data-i18n="modalApplyBadge">Candidature Express en 1 clic</span>
+          <h2 class="u-font-size-text-xl" id="apply-modal-title">Postuler à la offre</h2>
+        </div>
+        <button type="button" class="modal-close-btn" id="close-apply-modal" aria-label="Fermer">✕</button>
+      </div>
+
+      <div id="apply-modal-body">
+        <div class="u-background-surface u-padding-space-4 u-border-radius-radius-md u-border-1px-solid-border u-margin-block-end-space-4" id="apply-mission-summary"></div>
+
+        <form id="apply-form">
+          <div class="form-group">
+            <label for="applicant-name" class="form-label" data-i18n="labelStudentName">Étudiant vérifié (Profil MESRS)</label>
+            <input type="text" id="applicant-name" class="input-field" value="Yasmine Belkacem — Master 1 Génie Logiciel (USTHB)" required />
+          </div>
+
+          <div class="form-group">
+            <label for="applicant-rip" class="form-label" data-i18n="labelRip">RIP BaridiMob pour le versement séquestre</label>
+            <input type="text" id="applicant-rip" class="input-field" value="00799999000123456789" required />
+          </div>
+
+          <div class="form-group">
+            <label for="applicant-pitch" class="form-label" data-i18n="labelPitch">Message court au recruteur</label>
+            <textarea id="applicant-pitch" class="input-field" rows="3" required placeholder="Bonjour, je suis disponible aux horaires indiqués..."></textarea>
+          </div>
+
+          <div class="u-display-flex u-justify-content-flex-end u-gap-space-2">
+            <button type="button" class="btn btn-secondary" id="cancel-apply-btn" data-i18n="btnCancel">Annuler</button>
+            <button type="submit" class="btn btn-primary" id="submit-apply-btn" data-i18n="btnConfirmApply">Envoyer ma candidature</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Success Celebration View (Hidden until form submitted) -->
+      <div id="apply-success-view" class="success-check-wrap u-display-none">
+        <svg class="check-circle-svg" viewBox="0 0 80 80" fill="none">
+          <circle cx="40" cy="40" r="34" fill="#D9F8EF"/>
+          <circle class="check-circle-path" cx="40" cy="40" r="34" stroke="#14C8A0" stroke-width="4"/>
+          <path class="check-tick-path" d="M25 41 L35 51 L56 29" stroke="#0BA583" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3 class="u-font-size-text-xl u-margin-block-end-space-2" data-i18n="applySuccessTitle">Candidature envoyée avec succès !</h3>
+        <p class="u-font-size-text-sm u-color-muted u-margin-block-end-space-5" id="apply-success-desc"></p>
+        <button type="button" class="btn btn-primary" id="done-apply-btn" data-i18n="btnBackToMissions">Continuer l'exploration</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       MODAL 2: POST A MISSION (For Employers — Sanitizes & Adds Live Card)
+       ====================================================================== -->
+  <div class="modal-backdrop" id="post-modal" role="dialog" aria-modal="true" aria-labelledby="post-modal-title" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <span class="badge u-background-coral-100 u-color-coral-600 u-margin-block-end-0-35rem" data-i18n="modalPostBadge">Espace Recruteur</span>
+          <h2 class="u-font-size-text-xl" id="post-modal-title" data-i18n="ctaSecondary">Publier une offre</h2>
+        </div>
+        <button type="button" class="modal-close-btn" id="close-post-modal" aria-label="Fermer">✕</button>
+      </div>
+
+      <form id="post-mission-form">
+<div class="offer-form-grid"><div><label class="form-label" for="post-group">Famille d’offres</label><select class="input-field" id="post-group"><option value="work">Emplois & travail</option><option value="development">Services, stages & apprentissage</option></select></div><div><label class="form-label" for="post-type">Type d’opportunité</label><select class="input-field" id="post-type" required></select></div><div><label class="form-label" for="post-closes">Date de clôture</label><input class="input-field" type="date" id="post-closes" required></div></div>
+<button type="button" class="btn btn-secondary" id="post-template">Utiliser un exemple de stage informatique</button><p class="ws-sub">L’exemple remplit les sections ci-dessous. Personnalisez-les avant de publier.</p>
+        <div class="form-group">
+          <label for="post-mode" class="form-label">Mode de travail</label>
+          <select id="post-mode" class="input-field">
+            <option value="onsite">Sur place</option>
+            <option value="remote">Télétravail · 100 % à distance</option>
+            <option value="hybrid">Hybride · Sur place et à distance</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="post-title-input" class="form-label" data-i18n="labelMissionTitle">Titre de la offre</label>
+          <input type="text" id="post-title-input" class="input-field" required placeholder="Ex: Soutien Physique BAC ou Hôtesse Salon..." />
+        </div>
+
+        <div class="u-display-grid u-grid-template-columns-1fr-1fr u-gap-space-3">
+          <div class="form-group">
+            <label for="post-cat-select" class="form-label" data-i18n="labelCategory">Catégorie</label>
+            <select id="post-cat-select" class="input-field">
+              <option value="tutoring" data-i18n="catTutoring">Soutien & Cours</option>
+              <option value="events" data-i18n="catEvents">Événementiel</option>
+              <option value="design" data-i18n="catDesign">Design</option>
+              <option value="writing" data-i18n="catWriting">Traduction</option>
+              <option value="tech" data-i18n="catTech">Tech & Saisie</option>
+              <option value="retail" data-i18n="catRetail">Vente & Retail</option>
+              <option value="delivery" data-i18n="catDelivery">Livraison & Flyers</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="post-wilaya-select" class="form-label" data-i18n="labelWilaya">Wilaya</label>
+            <select id="post-wilaya-select" class="input-field">
+              <option value="Alger">Alger</option>
+              <option value="Oran">Oran</option>
+              <option value="Constantine">Constantine</option>
+              <option value="Sétif">Sétif</option>
+              <option value="Bordj Bou Arreridj">Bordj Bou Arreridj</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="u-display-grid u-grid-template-columns-1fr-1fr u-gap-space-3">
+          <div class="form-group">
+            <label for="post-pay-input" class="form-label" data-i18n="labelPayDzd">Rémunération (DZD)</label>
+            <input type="number" id="post-pay-input" class="input-field" min="0" max="100000" step="500" value="8000" required />
+          </div>
+
+          <div class="form-group">
+            <label for="post-duration-input" class="form-label" data-i18n="labelDuration">Durée estimée</label>
+            <input type="text" id="post-duration-input" class="input-field" value="6 heures" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="post-employer-input" class="form-label" data-i18n="labelEmployerName">Votre entreprise ou nom</label>
+          <input type="text" id="post-employer-input" class="input-field" value="Karim Touati (InnovDigital)" required />
+        </div>
+
+        <div class="form-group">
+          <label for="post-description" class="form-label">Description et tâches à réaliser</label>
+          <textarea id="post-description" class="input-field" rows="4" required minlength="20" maxlength="3000" placeholder="Décrivez le projet, les tâches et les livrables attendus…"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="post-requirements" class="form-label">Profil recherché · un point par ligne</label>
+          <textarea id="post-requirements" class="input-field" rows="3" required maxlength="2000" placeholder="Ex. : Figma, français courant, ordinateur personnel…"></textarea>
+        </div>
+        <fieldset class="post-structured"><legend>Détails de l’offre</legend><small>Écrivez un élément par ligne : chaque ligne deviendra une puce sur la page de l’offre.</small>
+<label for="post-duties">Tâches & responsabilités</label><textarea id="post-duties" class="input-field" rows="5" maxlength="4000" required placeholder="Analyser les besoins et rédiger les spécifications.&#10;Contribuer au développement web et mobile."></textarea>
+<label for="post-languages">Compétences linguistiques</label><textarea id="post-languages" class="input-field" rows="3" maxlength="1500" required placeholder="Arabe : courant.&#10;Français : courant.&#10;Anglais : bon niveau."></textarea>
+<label for="post-qualities">Qualités requises</label><textarea id="post-qualities" class="input-field" rows="3" maxlength="1500" required placeholder="Autonomie et respect des délais.&#10;Esprit d’analyse.&#10;Curiosité technique."></textarea>
+<label for="post-conditions">Conditions de travail / participation</label><textarea id="post-conditions" class="input-field" rows="4" maxlength="2000" required placeholder="Type de contrat : stage.&#10;Durée : 6 mois.&#10;Environnement : hybride."></textarea></fieldset>
+<div class="form-group">
+          <label for="post-schedule" class="form-label">Disponibilité et horaires</label>
+          <input id="post-schedule" class="input-field" maxlength="180" placeholder="Ex. : week-end, horaires flexibles, début le 20 novembre" />
+        </div>
+        <div class="u-display-flex u-justify-content-flex-end u-gap-space-2 u-margin-block-start-space-4">
+          <button type="button" class="btn btn-secondary" id="cancel-post-btn" data-i18n="btnCancel">Annuler</button>
+          <button type="submit" class="btn btn-primary" data-i18n="btnPublishNow">Publier maintenant</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       MODAL 3: QUICK LOGIN / DEMO SESSION SWITCHER
+       ====================================================================== -->
+  <div class="modal-backdrop" id="login-modal" role="dialog" aria-modal="true" aria-labelledby="login-modal-title" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <span class="badge u-background-violet-100 u-color-violet-500 u-margin-block-end-0-35rem">Session Démo Interactive</span>
+          <h2 class="u-font-size-text-xl" id="login-modal-title" data-i18n="btnLogin">Connexion</h2>
+        </div>
+        <button type="button" class="modal-close-btn" id="close-login-modal" aria-label="Fermer">✕</button>
+      </div>
+
+      <p class="u-font-size-text-sm u-color-muted u-margin-block-end-space-4" data-i18n="loginModalDesc">
+        Choisissez un profil vérifié pour tester l'expérience étudiant ou recruteur :
+      </p>
+
+      <div class="u-display-flex u-flex-direction-column u-gap-space-3">
+        <button type="button" class="trust-pillar-card u-inline-size-100 u-text-align-start u-cursor-pointer u-border-1-5px-solid-brand-500" id="demo-role-student">
+          <div class="pillar-icon u-background-brand-100 u-color-brand-600 u-font-weight-800">YB</div>
+          <div>
+            <div class="u-font-weight-800 u-color-ink">Yasmine Belkacem (Étudiante USTHB)</div>
+            <div class="u-font-size-text-xs u-color-muted">Master 1 Génie Logiciel · Carte MESRS validée</div>
+          </div>
+        </button>
+
+        <button type="button" class="trust-pillar-card u-inline-size-100 u-text-align-start u-cursor-pointer" id="demo-role-employer">
+          <div class="pillar-icon u-background-coral-100 u-color-coral-600 u-font-weight-800">KT</div>
+          <div>
+            <div class="u-font-weight-800 u-color-ink">Karim Touati — PME InnovDigital</div>
+            <div class="u-font-size-text-xs u-color-muted">Recruteur Vérifié · Alger (Dely Ibrahim)</div>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Region -->
+  <div class="toast-region" id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- ======================================================================
+       VANILLA JAVASCRIPT APPLICATION LOGIC
+       ====================================================================== -->
+  <script src="offers-data.js"></script>
+  <script src="script.js"></script>
+  <script src="dashboard.js"></script>
+  <script src="offers-catalog.js"></script>
+</body>
+</html>

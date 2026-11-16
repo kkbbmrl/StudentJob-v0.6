@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="UTF-8">
+<script>(function(){var language;try{language=JSON.parse(localStorage.getItem('jobetudiant_lang'));}catch(e){}if(!['fr','en','ar'].includes(language)){language=(navigator.language||'fr').split('-')[0];if(!['fr','en','ar'].includes(language))language='fr';}document.documentElement.lang=language;document.documentElement.dir=language==='ar'?'rtl':'ltr';document.documentElement.classList.add('i18n-pending');})();</script>
+<script src="i18n/fr.js"></script><script src="i18n/en.js"></script><script src="i18n/ar.js"></script><script src="i18n.js"></script><meta name="viewport" content="width=device-width, initial-scale=1"><title data-i18n="text.6">Composants — JobEtudiant</title><link rel="stylesheet" href="styles.css">
+<link rel="preload" as="font" href="assets/fonts/inter-latin-variable.woff2" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="tokens.css">
+
+<link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#4f6bff">
+<meta property="og:title" content="JobEtudiant — Des opportunités pour les étudiants">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/social/social-preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<script src="assets/icons/icons.js"></script><script src="offer-card.js"></script>
+<script src="ui.js" defer></script>
+</head>
+<body class="op-page" ><a class="skip-link" href="#page-main">Aller au contenu</a><header class="op-header"><div class="unified-header-inner"><a href="index.html" class="brand-logo" aria-label="JobEtudiant DZ — Accueil">
+        <span class="brand-logo-mark" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+          </svg>
+        </span>
+        <span>JobEtudiant</span>
+        <span class="brand-logo-tag">DZ</span>
+      </a><nav aria-label="Navigation principale"><a href="index.html#missions" aria-current="page">Offres</a><a href="companies.html" >Entreprises</a><a href="index.html#how-it-works">Comment ça marche</a><a href="index.html?workspace=1" class="btn btn-primary">Mon espace</a></nav></div></header><main id="page-main" class="op-container"><div class="directory-heading"><div><span class="op-kicker">JOBETUDIANT · DESIGN SYSTEM</span><h1>Une même famille de composants.</h1><p>Référence visuelle des états et composants partagés.</p></div></div>
+<section class="component-section"><h2>Boutons</h2><div class="component-row"><button class="btn btn-primary">Action principale</button><button class="btn btn-secondary">Action secondaire</button><button class="btn btn-primary" disabled>Indisponible</button><button class="btn btn-primary" aria-busy="true">Chargement</button></div></section>
+<section class="component-section"><h2>Champs et validation</h2><div class="component-grid"><label>Nom complet<input class="input-field" placeholder="Votre nom"></label><label>Localisation<select class="input-field"><option>Alger</option><option>Oran</option></select></label><label>Champ désactivé<input class="input-field" disabled value="Exemple"></label><label>Adresse e-mail<input class="input-field" type="email" aria-invalid="true" aria-describedby="sample-error" value="adresse"><span class="field-error" id="sample-error">Indiquez une adresse e-mail complète.</span></label><label><input type="checkbox"> Exemple de sélection</label><label><input type="checkbox" disabled> Sélection indisponible</label></div></section>
+<section class="component-section"><h2>Statuts</h2><div class="component-row"><span class="ws-badge">En attente</span><span class="ws-badge ws-good">Acceptée</span><span class="ws-badge ws-muted">En pause</span><span class="badge status-error">Erreur</span></div></section>
+<section class="component-section"><h2>Cartes et états vides</h2><div class="component-grid"><article class="ws-card"><span class="op-kicker">CARTE STANDARD</span><h3>Une opportunité à découvrir</h3><p>Les titres, espacements et actions suivent les mêmes règles.</p><button class="btn btn-secondary">Voir les détails</button></article><div class="op-empty"><h3>Aucun résultat</h3><p>Modifiez votre recherche ou réinitialisez les filtres.</p><button class="btn btn-secondary">Réinitialiser</button></div></div></section>
+<section class="component-section"><h2>Chargement</h2><div class="ui-skeleton-card" role="status" aria-label="Chargement du contenu"><span></span><span></span><span></span></div></section>
+<section class="component-section"><h2>Pagination</h2><nav class="ui-pagination" aria-label="Exemple de pagination"><button disabled aria-label="Page précédente">←</button><button aria-current="page">1</button><button>2</button><button>3</button><button aria-label="Page suivante">→</button></nav></section>
+<section class="component-section"><h2>Notifications</h2><div class="ui-notice" role="status">Les modifications ont été enregistrées.</div><div class="ui-notice ui-notice-error">Vérifiez les champs indiqués avant de continuer.</div></section>
+</main><footer data-shared-footer></footer></body></html>
