@@ -818,5 +818,7 @@ window.JobTranslations.ar={
   "live.errors.server_unavailable": "تعذّر الاتصال بالخادم. لم يتم تأكيد إرسال رسالتك.",
   "live.errors.server_error": "تعذّر على الخادم إتمام هذا الإجراء. حاول مجددًا.",
   "live.errors.invalid_json": "تعذّرت قراءة النموذج. حاول مجددًا.",
-  "live.errors.request_too_large": "المحتوى كبير جدًا."
+  "live.errors.request_too_large": "المحتوى كبير جدًا.",
+  "live.companyUnverified": "شركة غير موثّقة",
+  "live.companyDescription": "اكتشف عروض هذه الشركة وشروطها."
 };

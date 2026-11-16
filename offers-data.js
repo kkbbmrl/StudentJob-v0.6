@@ -233,13 +233,13 @@ const legacyOffers = [
   );
   const custom=()=>{const value=read('jobetudiant_offers',[]);return Array.isArray(value)?value.filter(m=>m&&typeof m.id==='string'&&m.title&&types[m.opportunityType]):[];};
   const all=()=>window.LiveApp?.enabled&&window.LiveApp.offers.length?[...window.LiveApp.offers]:[...custom(),...seedOffers];
-  const isVisible=id=>{const w=read('jobetudiant_workspace',{});return !(w.hidden||[]).includes(id)&&!(w.paused||[]).includes(id);};
+  const isVisible=id=>{if(window.LiveApp?.enabled)return true;const w=read('jobetudiant_workspace',{});return !(w.hidden||[]).includes(id)&&!(w.paused||[]).includes(id);};
   const get=id=>all().find(m=>m.id===id);
   const slug=name=>'company-'+Array.from(name).map(c=>c.codePointAt(0).toString(16)).join('-');
-  function companies(){const result=companySeeds.map(c=>({...c}));for(const offer of all()){const name=local(offer.employer);if(!offer.companyId)offer.companyId=slug(name);if(!result.some(c=>c.id===offer.companyId)){result.push({id:offer.companyId,name,sector:'Services & recrutement',location:offer.wilaya,size:'Non précisé',initials:name.split(' ').map(w=>w[0]).slice(0,2).join(''),color:'#4f6bff',description:offer.companyDescription||'Découvrez les opportunités de cet employeur de démonstration pour les étudiants.',benefits:['Consultez les offres disponibles et leurs conditions.']});}}return result;}
+  function companies(){const result=companySeeds.map(c=>({...c}));for(const offer of all()){const name=local(offer.employer);if(!offer.companyId)offer.companyId=slug(name);if(!result.some(c=>c.id===offer.companyId)){result.push({id:offer.companyId,name,isLive:Boolean(window.LiveApp?.enabled&&offer.owner&&offer.owner!=='demo-recruiter'),sector:'Services & recrutement',location:offer.wilaya,size:'Non précisé',initials:name.split(' ').map(w=>w[0]).slice(0,2).join(''),color:'#4f6bff',description:offer.companyDescription||(window.LiveApp?.enabled&&offer.owner&&offer.owner!=='demo-recruiter'?I18n.t('live.companyDescription'):'Découvrez les opportunités de cet employeur de démonstration pour les étudiants.'),benefits:['Consultez les offres disponibles et leurs conditions.']});}}return result;}
   seedOffers.forEach(m=>{if(!m.companyId)m.companyId=slug(local(m.employer));});
   function add(offer){offer.companyId=companySeeds.find(c=>c.name.toLowerCase()===local(offer.employer).toLowerCase())?.id||slug(local(offer.employer));return write('jobetudiant_offers',[offer,...custom()]);}
-  function applied(){if(window.LiveApp?.enabled)return window.LiveApp.applications.filter(app=>app.status!=='withdrawn').map(app=>app.offerId);const a=read('jobetudiant_applied',[]);return Array.isArray(a)?a:[];}
+  function applied(){if(window.LiveApp?.enabled)return window.LiveApp.applications.map(app=>app.offerId);const a=read('jobetudiant_applied',[]);return Array.isArray(a)?a:[];}
   function apply(id,message,applicant={}){
     const offer=get(id);
     if(!offer||!isVisible(id)||isClosed(offer))return false;

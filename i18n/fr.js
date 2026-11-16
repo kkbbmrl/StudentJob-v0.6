@@ -818,5 +818,7 @@ window.JobTranslations.fr={
   "live.errors.server_unavailable": "Impossible de joindre le serveur. Votre message n’a pas été confirmé comme envoyé.",
   "live.errors.server_error": "Le serveur n’a pas pu terminer cette action. Réessayez.",
   "live.errors.invalid_json": "Le formulaire n’a pas pu être lu. Réessayez.",
-  "live.errors.request_too_large": "Le contenu est trop volumineux."
+  "live.errors.request_too_large": "Le contenu est trop volumineux.",
+  "live.companyUnverified": "Entreprise non vérifiée",
+  "live.companyDescription": "Découvrez les offres de cette entreprise et leurs conditions."
 };

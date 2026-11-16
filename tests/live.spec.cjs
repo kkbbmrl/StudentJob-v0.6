@@ -25,6 +25,7 @@ test('a message crosses separate browsers and only its recruiter receives it',as
  await recruiter.locator('[data-live-tab=applications]').click();await expect(recruiter.locator('#live-content')).toContainText('Aucune candidature');
  await register(student,'student','student-'+unique+'@example.test');await student.locator('[data-live-action=close]').click();
  await student.goto(base+'/'+href);await student.waitForFunction(()=>window.LiveApp?.user?.role==='student');
+ const companyHref=await student.locator('.op-company-line').getAttribute('href');
  await student.locator('#offer-apply').click();
  const message='Je suis disponible ce week-end.\nMon message complet <script>window.messageExecuted=true</script> doit arriver au recruteur.';
  await student.locator('[name=message]').fill(message);await student.locator('#offer-application [type=submit]').click();
@@ -36,6 +37,7 @@ test('a message crosses separate browsers and only its recruiter receives it',as
  await register(other,'recruiter','stranger-'+unique+'@example.test','Another employer');await expect(other.locator('.live-application')).toHaveCount(0);
  await recruiter.locator('[data-review=accepted]').click();await expect(recruiter.locator('.live-application .ws-badge').first()).toHaveText('Acceptée');
  await student.goto(base+'/index.html?workspace=1');await expect(student.locator('.live-application .ws-badge').first()).toHaveText('Acceptée');
+ await student.goto(base+'/'+companyHref);await expect(student.locator('h1')).toHaveText('Actual employer');await expect(student.locator('.company-status')).toContainText('non vérifiée');
  await recruiterContext.close();await studentContext.close();await otherContext.close();
 });
 

@@ -818,5 +818,7 @@ window.JobTranslations.en={
   "live.errors.server_unavailable": "Unable to reach the server. Your message has not been confirmed as sent.",
   "live.errors.server_error": "The server could not complete this action. Try again.",
   "live.errors.invalid_json": "The form could not be read. Try again.",
-  "live.errors.request_too_large": "The content is too large."
+  "live.errors.request_too_large": "The content is too large.",
+  "live.companyUnverified": "Unverified company",
+  "live.companyDescription": "Explore this company’s offers and their conditions."
 };

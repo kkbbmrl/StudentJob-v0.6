@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if(kind==='moderate'||kind==='pause'){const key=kind==='moderate'?'hidden':'paused';data[key]=data[key].includes(id)?data[key].filter(x=>x!==id):[...data[key],id];api.renderMissions();}
     save();render();host.querySelector('#ws-feedback').textContent='Modification enregistrée dans la démo.';
   });
-  window.workspaceDemo={close,getRole:()=>role, showDetails, isVisible:id=>!data.hidden.includes(id)&&!data.paused.includes(id)};
+  window.workspaceDemo={close,getRole:()=>role, showDetails, isVisible:id=>window.LiveApp?.enabled||!data.hidden.includes(id)&&!data.paused.includes(id)};
   updateRole();
   api.renderMissions();
   if(new URLSearchParams(location.search).has('workspace'))open();

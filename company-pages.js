@@ -22,7 +22,7 @@
     const colors=companyAccent(company.color);
     return `<span class="company-mark" style="--company-color:${colors.background};--company-foreground:${colors.foreground}" data-authored>${company.logo?`<img src="${esc(company.logo)}" alt="" width="64" height="64" data-company-logo>`:''}<span>${esc(company.initials||company.name.split(/\s+/).map(x=>x[0]).slice(0,2).join(''))}</span></span>`;
   }
-  function status(company){return `<span class="badge company-status">${Icon(company.verified?'badge-check':'info','sm')}${esc(tr(company.verified?'Vérifié':'Entreprise démo'))}</span>`;}
+  function status(company){return `<span class="badge company-status">${Icon(company.verified?'badge-check':'info','sm')}${esc(tr(company.verified?'Vérifié':company.isLive?I18n.t('live.companyUnverified'):'Entreprise démo'))}</span>`;}
   const authoredDescription=company=>store.all().some(offer=>offer.owner&&offer.companyDescription&&offer.companyDescription===company.description);
   const description=company=>authoredDescription(company)?company.description:tr(company.description);
   function card(company){return `<article class="company-card"><div class="company-card-heading">${avatar(company)}<div><h2 data-authored>${esc(company.name)}</h2><span class="badge sector-badge">${esc(tr(company.sector))}</span></div></div>${status(company)}<p class="company-description" ${authoredDescription(company)?'data-authored':''}>${esc(description(company))}</p><div class="company-facts">${fact('map-pin','Localisation',company.location)}${fact('briefcase','Offres ouvertes',I18n.number(available(company).length))}${fact('users','Effectif',tr(company.size))}</div><div class="company-actions"><a class="btn btn-primary" href="${companyUrl(company.id)}">${esc(I18n.t("common.copy.viewCompany"))}${Icon('arrow-right','sm')}</a></div></article>`;}
@@ -60,5 +60,6 @@
   host.addEventListener('click',event=>{if(event.target.closest('[data-reset-companies]'))document.querySelector('#company-filters').reset();if(event.target.closest('[data-retry-companies]'))render();});
   document.addEventListener('error',event=>{if(event.target.matches?.('[data-company-logo]'))event.target.hidden=true;},true);
   window.addEventListener('languagechange',render);
+  window.addEventListener('live-ready',render);window.addEventListener('live-offers',render);
   render();
 })();

@@ -1100,5 +1100,10 @@
 
 
 
-window.addEventListener('live-ready',()=>{if(window.jobWorkspace){window.jobWorkspace.state.missions=OfferStore.all();window.jobWorkspace.state.appliedIds=new Set(OfferStore.applied());window.jobWorkspace.renderMissions();}});
-window.addEventListener('live-offers',()=>{if(window.jobWorkspace){window.jobWorkspace.state.missions=OfferStore.all();window.jobWorkspace.renderMissions();}});
+function syncLiveCatalog(){
+  if(!window.jobWorkspace)return;
+  window.jobWorkspace.state.missions=OfferStore.all();
+  window.jobWorkspace.state.appliedIds=new Set(OfferStore.applied());
+  window.jobWorkspace.renderMissions();
+}
+['live-ready','live-offers','live-session'].forEach(event=>window.addEventListener(event,syncLiveCatalog));

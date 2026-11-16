@@ -6208,3 +6208,5 @@ html[dir=rtl] [data-page=offer] .offer-dossier h1{letter-spacing:normal;line-hei
 .live-application-footer>span{margin-inline-end:auto}
 [data-page=offer] .op-status[data-error=true]{color:var(--error)!important}
 @media(max-width:767px){.live-topbar{flex-wrap:wrap}.live-body{padding-block:var(--space-6)}.live-application-heading{flex-direction:column}.live-application-footer .btn{width:100%}}
+
+.live-body #live-feedback.field-error{color:var(--error)}
